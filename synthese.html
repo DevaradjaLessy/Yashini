@@ -1,0 +1,1341 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Synthèse RA1 · Liens entre les cours</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600;700&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Literata:ital,opsz,wght@0,7..72,400..800;1,7..72,400..600&display=swap">
+<link rel="stylesheet" href="style.css">
+<style>
+  .tagc { font-family: var(--f-mono); font-size: var(--fs-xs); font-weight: 700; padding: .05rem .45rem; border-radius: 999px; border: 1px solid var(--rule); white-space: nowrap; }
+  .tagc.c1 { color: var(--hema); background: var(--hema-soft); border-color: var(--def-bd); }
+  .tagc.c2 { color: var(--mn-ink); background: var(--mn-bg); border-color: var(--a-nerf); }
+  .tagc.c3 { color: var(--pg-ink); background: var(--pg-bg); border-color: var(--a-muscle); }
+  .sv-c1 { fill: var(--hema-soft); stroke: var(--hema); stroke-width: 1; }
+  .sv-c2 { fill: var(--a-nerf-l); stroke: var(--a-nerf); stroke-width: 1; }
+  .sv-c3 { fill: var(--a-muscle-l); stroke: var(--a-muscle); stroke-width: 1; }
+  .sv-tc { font-family: var(--f-mono); font-size: 11px; font-weight: 700; fill: var(--ink); }
+  .mnemo-grid { display: grid; gap: .8rem; grid-template-columns: repeat(auto-fill, minmax(min(100%, 21rem), 1fr)); align-items: start; }
+  .mnemo-grid > .note { max-width: none; }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar__in">
+    <a class="brand" href="index.html"><span class="brand__mark">RA1</span><span class="brand__sub">Grandes fonctions physiologiques</span></a>
+    <nav class="nav" aria-label="Pages">
+      <a href="index.html">Accueil</a>
+      <a href="cours1.html">1 · Homéostasie</a>
+      <a href="cours2.html">2 · Système nerveux</a>
+      <a href="cours3.html">3 · Locomotion</a>
+      <a href="synthese.html" aria-current="page">Liens &amp; synthèse</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page">
+
+  <aside class="toc">
+    <details>
+      <summary>Sommaire de la synthèse</summary>
+      <ol>
+        <li><a href="#frisson">Le frisson, fil rouge des 3 cours</a></li>
+        <li><a href="#geste">De l'intention au geste</a></li>
+        <li><a href="#carte-liens">Carte des liens</a></li>
+        <li><a href="#pieges">Les grands pièges</a></li>
+        <li><a href="#mnemos">Tous les mnémos</a></li>
+        <li><a href="#examen-blanc">Examen blanc mélangé</a></li>
+        <li><a href="#essentiel">L'essentiel des 3 cours</a></li>
+      </ol>
+    </details>
+  </aside>
+
+  <main class="doc">
+
+    <section class="cours-head">
+      <p class="eyebrow">Synthèse · cours 1 + 2 + 3</p>
+      <h1>Ce qui relie les trois cours</h1>
+      <p class="lead">Les trois cours décrivent la même machine vue sous trois angles : l'homéostasie dit <b>pourquoi</b> le corps réagit, le système nerveux dit <b>qui commande</b>, l'appareil locomoteur dit <b>qui exécute</b>. Les examens aiment les questions qui traversent les cours : c'est ici qu'on les prépare.</p>
+      <div class="legende" aria-label="Repères de cours">
+        <span class="tagc c1">C1 · Homéostasie</span>
+        <span class="tagc c2">C2 · Système nerveux</span>
+        <span class="tagc c3">C3 · Locomotion</span>
+      </div>
+    </section>
+
+    <!-- ===================== LE FRISSON ===================== -->
+    <section class="chap" id="frisson">
+      <header>
+        <p class="eyebrow">Fil rouge</p>
+        <h2>Le frisson : homéostasie + système nerveux + muscle</h2>
+      </header>
+      <div class="notion">
+        <p>Le cours 1 part d'un exemple simple : « je tremble quand j'ai froid » <span class="src">C1 · diapo 10</span>. Ce frisson est la meilleure question transversale possible : chaque étape vient d'un cours différent, et l'ensemble forme une <b>boucle de rétrocontrôle négatif</b>.</p>
+
+        <figure class="schema">
+          <div class="schema__scroll">
+            <svg class="w-lg" viewBox="0 0 760 470" role="img" aria-labelledby="sy-s1-t">
+              <title id="sy-s1-t">La boucle du frisson, étape par étape, avec le cours d'origine de chaque étape</title>
+              <defs>
+                <marker id="sy-s1-fl" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="sv-arrow"/></marker>
+                <marker id="sy-s1-fm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="f-moins"/></marker>
+              </defs>
+
+              <!-- Rangée du haut : détection -->
+              <rect x="20" y="30" width="160" height="80" rx="10" class="sv-boxh"/>
+              <rect x="150" y="36" width="26" height="15" rx="7.5" class="sv-c1"/><text x="163" y="47.5" text-anchor="middle" class="sv-tc">C1</text>
+              <text x="100" y="66" text-anchor="middle" class="sv-tb">Il fait froid</text>
+              <text x="100" y="84" text-anchor="middle" class="sv-ts">la température du corps</text>
+              <text x="100" y="99" text-anchor="middle" class="sv-ts">baisse = la VARIABLE</text>
+
+              <rect x="205" y="30" width="160" height="80" rx="10" class="sv-box"/>
+              <rect x="305" y="36" width="26" height="15" rx="7.5" class="sv-c1"/><text x="318" y="47.5" text-anchor="middle" class="sv-tc">C1</text>
+              <rect x="335" y="36" width="26" height="15" rx="7.5" class="sv-c2"/><text x="348" y="47.5" text-anchor="middle" class="sv-tc">C2</text>
+              <text x="285" y="66" text-anchor="middle" class="sv-tb">Thermorécepteurs</text>
+              <text x="285" y="84" text-anchor="middle" class="sv-ts">de la peau = DÉTECTEUR</text>
+              <text x="285" y="99" text-anchor="middle" class="sv-ts">(fonction « détecter »)</text>
+
+              <rect x="390" y="30" width="160" height="80" rx="10" class="sv-box"/>
+              <rect x="520" y="36" width="26" height="15" rx="7.5" class="sv-c2"/><text x="533" y="47.5" text-anchor="middle" class="sv-tc">C2</text>
+              <text x="470" y="66" text-anchor="middle" class="sv-tb">Neurone sensitif</text>
+              <text x="470" y="84" text-anchor="middle" class="sv-ts">message AFFÉRENT</text>
+              <text x="470" y="99" text-anchor="middle" class="sv-ts">qui monte vers le SNC</text>
+
+              <rect x="575" y="30" width="160" height="80" rx="10" class="sv-box2"/>
+              <rect x="675" y="36" width="26" height="15" rx="7.5" class="sv-c1"/><text x="688" y="47.5" text-anchor="middle" class="sv-tc">C1</text>
+              <rect x="705" y="36" width="26" height="15" rx="7.5" class="sv-c2"/><text x="718" y="47.5" text-anchor="middle" class="sv-tc">C2</text>
+              <text x="655" y="66" text-anchor="middle" class="sv-tb">Centre de contrôle</text>
+              <text x="655" y="84" text-anchor="middle" class="sv-ts">thermorégulation</text>
+              <text x="655" y="99" text-anchor="middle" class="sv-ts">dans le cerveau = INTÉGRER</text>
+
+              <line x1="181" y1="70" x2="203" y2="70" class="sv-l" marker-end="url(#sy-s1-fl)"/>
+              <line x1="366" y1="70" x2="388" y2="70" class="sv-l" marker-end="url(#sy-s1-fl)"/>
+              <line x1="551" y1="70" x2="573" y2="70" class="sv-l" marker-end="url(#sy-s1-fl)"/>
+
+              <!-- Descente -->
+              <line x1="655" y1="111" x2="655" y2="197" class="sv-l" marker-end="url(#sy-s1-fl)"/>
+              <rect x="575" y="200" width="160" height="80" rx="10" class="sv-box"/>
+              <rect x="705" y="206" width="26" height="15" rx="7.5" class="sv-c2"/><text x="718" y="217.5" text-anchor="middle" class="sv-tc">C2</text>
+              <text x="655" y="236" text-anchor="middle" class="sv-tb">Voie motrice</text>
+              <text x="655" y="254" text-anchor="middle" class="sv-ts">message EFFÉRENT</text>
+              <text x="655" y="269" text-anchor="middle" class="sv-ts">qui descend la moelle</text>
+              <line x1="655" y1="281" x2="655" y2="367" class="sv-l" marker-end="url(#sy-s1-fl)"/>
+
+              <!-- Branche parallèle (complément) -->
+              <line x1="590" y1="112" x2="522" y2="148" class="sv-lt" marker-end="url(#sy-s1-fl)"/>
+              <rect x="280" y="150" width="255" height="105" rx="10" class="sv-box dash"/>
+              <text x="407" y="172" text-anchor="middle" class="sv-tm">EN PARALLÈLE · COMPLÉMENT</text>
+              <text x="407" y="194" text-anchor="middle" class="sv-ts">le SNA sympathique resserre</text>
+              <text x="407" y="211" text-anchor="middle" class="sv-ts">les vaisseaux de la peau :</text>
+              <text x="407" y="228" text-anchor="middle" class="sv-ts">moins de chaleur perdue</text>
+              <text x="407" y="245" text-anchor="middle" class="sv-ts">(peau pâle, « chair de poule »)</text>
+
+              <!-- Rangée du bas : exécution -->
+              <rect x="575" y="370" width="160" height="80" rx="10" class="sv-box"/>
+              <rect x="675" y="376" width="26" height="15" rx="7.5" class="sv-c2"/><text x="688" y="387.5" text-anchor="middle" class="sv-tc">C2</text>
+              <rect x="705" y="376" width="26" height="15" rx="7.5" class="sv-c3"/><text x="718" y="387.5" text-anchor="middle" class="sv-tc">C3</text>
+              <text x="655" y="406" text-anchor="middle" class="sv-tb">Motoneurones</text>
+              <text x="655" y="424" text-anchor="middle" class="sv-ts">corne antérieure moelle</text>
+              <text x="655" y="439" text-anchor="middle" class="sv-ts">→ unités motrices</text>
+
+              <rect x="390" y="370" width="160" height="80" rx="10" class="sv-box"/>
+              <rect x="520" y="376" width="26" height="15" rx="7.5" class="sv-c3"/><text x="533" y="387.5" text-anchor="middle" class="sv-tc">C3</text>
+              <text x="470" y="406" text-anchor="middle" class="sv-tb">JNM (synapse)</text>
+              <text x="470" y="424" text-anchor="middle" class="sv-ts">acétylcholine → PA</text>
+              <text x="470" y="439" text-anchor="middle" class="sv-ts">→ Ca²⁺ dans la fibre</text>
+
+              <rect x="205" y="370" width="160" height="80" rx="10" class="sv-boxe"/>
+              <rect x="305" y="376" width="26" height="15" rx="7.5" class="sv-c1"/><text x="318" y="387.5" text-anchor="middle" class="sv-tc">C1</text>
+              <rect x="335" y="376" width="26" height="15" rx="7.5" class="sv-c3"/><text x="348" y="387.5" text-anchor="middle" class="sv-tc">C3</text>
+              <text x="285" y="406" text-anchor="middle" class="sv-tb">Le frisson</text>
+              <text x="285" y="424" text-anchor="middle" class="sv-ts">muscles squelettiques =</text>
+              <text x="285" y="439" text-anchor="middle" class="sv-ts">EFFECTEUR, involontaire</text>
+
+              <rect x="20" y="370" width="160" height="80" rx="10" class="sv-boxh"/>
+              <rect x="120" y="376" width="26" height="15" rx="7.5" class="sv-c3"/><text x="133" y="387.5" text-anchor="middle" class="sv-tc">C3</text>
+              <rect x="150" y="376" width="26" height="15" rx="7.5" class="sv-c1"/><text x="163" y="387.5" text-anchor="middle" class="sv-tc">C1</text>
+              <text x="100" y="406" text-anchor="middle" class="sv-tb">Chaleur</text>
+              <text x="100" y="424" text-anchor="middle" class="sv-ts">≈ ¾ de l'énergie de l'ATP</text>
+              <text x="100" y="439" text-anchor="middle" class="sv-ts">→ la température remonte</text>
+
+              <line x1="574" y1="410" x2="552" y2="410" class="sv-l" marker-end="url(#sy-s1-fl)"/>
+              <line x1="389" y1="410" x2="367" y2="410" class="sv-l" marker-end="url(#sy-s1-fl)"/>
+              <line x1="204" y1="410" x2="182" y2="410" class="sv-l" marker-end="url(#sy-s1-fl)"/>
+
+              <!-- Rétroaction négative -->
+              <line x1="100" y1="368" x2="100" y2="114" class="s-moins sw2 f-none" marker-end="url(#sy-s1-fm)"/>
+              <circle cx="100" cy="240" r="12" class="f-moins"/>
+              <text x="100" y="245.5" text-anchor="middle" class="sv-tb f-surface">–</text>
+              <text x="122" y="214" class="sv-te">rétroaction</text>
+              <text x="122" y="231" class="sv-ts">négative : quand on</text>
+              <text x="122" y="247" class="sv-ts">revient vers 37 °C,</text>
+              <text x="122" y="263" class="sv-ts">la boucle s'arrête</text>
+            </svg>
+          </div>
+          <figcaption><b>Schéma S.1</b> Suis les flèches dans le sens des aiguilles d'une montre. Les pastilles C1, C2, C3 disent de quel cours vient chaque étape. La flèche rouge « – » ferme la boucle : la chaleur produite supprime la cause du frisson.</figcaption>
+        </figure>
+
+        <ol class="steps">
+          <li><span><b>La variable baisse</b> (température du corps). C'est le vocabulaire du rétrocontrôle : variable, détecteur, centre, effecteur. <a href="cours1.html#c1-retro-negatif">C1 · rétrocontrôle négatif</a></span></li>
+          <li><span><b>Les thermorécepteurs détectent</b> le froid : c'est la fonction « détecter » du système nerveux. <a href="cours2.html#c2-fonctions">C2 · les 3 fonctions</a></span></li>
+          <li><span><b>Un neurone sensitif (afférent)</b> amène l'information au SNC. <a href="cours2.html#c2-nerf">C2 · afférent / efférent</a></span></li>
+          <li><span><b>Le centre de thermorégulation intègre</b> l'information et décide (il se trouve dans l'hypothalamus, détail hors diapo). <a href="cours1.html#c1-controle">C1 · système de contrôle</a></span></li>
+          <li><span><b>La voie motrice et les motoneurones</b> envoient l'ordre aux muscles, sans que tu le décides : c'est une commande involontaire de muscles normalement volontaires. <a href="cours3.html#c3-unite-motrice">C3 · unité motrice</a></span></li>
+          <li><span><b>À la jonction neuromusculaire</b>, l'acétylcholine déclenche la libération de Ca²⁺ dans la fibre. <a href="cours3.html#c3-jnm">C3 · JNM</a></span></li>
+          <li><span><b>Les muscles se contractent</b> par petites secousses répétées : le frisson. <a href="cours3.html#c3-contraction">C3 · contraction</a></span></li>
+          <li><span><b>Environ ¾ de l'énergie</b> de la contraction part en chaleur : le muscle est le principal producteur de chaleur du corps. <a href="cours3.html#c3-fibres-energie">C3 · énergie</a></span></li>
+          <li><span><b>La température remonte</b>, l'écart disparaît, le frisson s'arrête : rétroaction négative. <a href="cours1.html#c1-homeostasie">C1 · homéostasie</a></span></li>
+        </ol>
+
+        <div class="note piege">
+          <p class="tag">Piège</p>
+          <p>Le frisson est un rétrocontrôle <b>négatif</b> : la réponse (chaleur) s'oppose au changement (froid). Ne le confonds pas avec le rétrocontrôle positif de l'accouchement, où la réponse amplifie le changement.</p>
+        </div>
+        <div class="note plus">
+          <p class="tag">Complément hors diapo</p>
+          <p>Quand il fait chaud, la même boucle marche dans l'autre sens : transpiration (le mot apparaît diapo 47 du cours 1) et dilatation des vaisseaux de la peau pour perdre de la chaleur.</p>
+        </div>
+        <div class="note retenir">
+          <p class="tag">À retenir</p>
+          <p>Frisson = boucle de rétrocontrôle négatif. Détecteur : thermorécepteurs. Centre : thermorégulation dans le cerveau. Effecteur : muscles squelettiques, dont la contraction libère surtout de la chaleur.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== DE L'INTENTION AU GESTE ===================== -->
+    <section class="chap" id="geste">
+      <header>
+        <p class="eyebrow">Deuxième fil rouge</p>
+        <h2>De l'intention au geste : prendre un verre</h2>
+      </header>
+      <div class="notion">
+        <p>Le cours 3 prend l'exemple du verre <span class="src">C3 · diapo 6</span>. Pour le comprendre en entier, il faut la voie motrice du cours 2 <span class="src">C2 · diapo 28</span> puis la contraction du cours 3. Le schéma enchaîne les deux.</p>
+
+        <figure class="schema">
+          <div class="schema__scroll">
+            <svg class="w-lg" viewBox="0 0 740 300" role="img" aria-labelledby="sy-s2-t">
+              <title id="sy-s2-t">De la décision de prendre un verre jusqu'à la flexion du coude</title>
+              <defs>
+                <marker id="sy-s2-fl" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="sv-arrow"/></marker>
+              </defs>
+
+              <!-- Rangée 1 : cerveau et moelle -->
+              <rect x="15" y="30" width="130" height="84" rx="10" class="sv-box"/>
+              <rect x="115" y="35" width="26" height="15" rx="7.5" class="sv-c3"/><text x="128" y="46.5" text-anchor="middle" class="sv-tc">C3</text>
+              <text x="80" y="66" text-anchor="middle" class="sv-tb">1 · Décider</text>
+              <text x="80" y="84" text-anchor="middle" class="sv-ts">aires associatives :</text>
+              <text x="80" y="99" text-anchor="middle" class="sv-ts">où est le verre ?</text>
+
+              <rect x="160" y="30" width="130" height="84" rx="10" class="sv-box"/>
+              <rect x="260" y="35" width="26" height="15" rx="7.5" class="sv-c3"/><text x="273" y="46.5" text-anchor="middle" class="sv-tc">C3</text>
+              <text x="225" y="66" text-anchor="middle" class="sv-tb">2 · Programmer</text>
+              <text x="225" y="84" text-anchor="middle" class="sv-ts">cortex prémoteur +</text>
+              <text x="225" y="99" text-anchor="middle" class="sv-ts">noyaux gris centraux</text>
+
+              <rect x="305" y="30" width="130" height="84" rx="10" class="sv-boxh"/>
+              <rect x="375" y="35" width="26" height="15" rx="7.5" class="sv-c2"/><text x="388" y="46.5" text-anchor="middle" class="sv-tc">C2</text>
+              <rect x="405" y="35" width="26" height="15" rx="7.5" class="sv-c3"/><text x="418" y="46.5" text-anchor="middle" class="sv-tc">C3</text>
+              <text x="370" y="66" text-anchor="middle" class="sv-tb">3 · Exécuter</text>
+              <text x="370" y="84" text-anchor="middle" class="sv-ts">cortex moteur :</text>
+              <text x="370" y="99" text-anchor="middle" class="sv-ts">1er neurone moteur</text>
+
+              <rect x="450" y="30" width="130" height="84" rx="10" class="sv-box"/>
+              <rect x="550" y="35" width="26" height="15" rx="7.5" class="sv-c2"/><text x="563" y="46.5" text-anchor="middle" class="sv-tc">C2</text>
+              <text x="515" y="66" text-anchor="middle" class="sv-tb">Croisement</text>
+              <text x="515" y="84" text-anchor="middle" class="sv-ts">au bulbe : cerveau</text>
+              <text x="515" y="99" text-anchor="middle" class="sv-ts">gauche → bras droit</text>
+
+              <rect x="595" y="30" width="130" height="84" rx="10" class="sv-box"/>
+              <rect x="665" y="35" width="26" height="15" rx="7.5" class="sv-c2"/><text x="678" y="46.5" text-anchor="middle" class="sv-tc">C2</text>
+              <rect x="695" y="35" width="26" height="15" rx="7.5" class="sv-c3"/><text x="708" y="46.5" text-anchor="middle" class="sv-tc">C3</text>
+              <text x="660" y="66" text-anchor="middle" class="sv-tb">2e neurone</text>
+              <text x="660" y="84" text-anchor="middle" class="sv-ts">moteur, dans la corne</text>
+              <text x="660" y="99" text-anchor="middle" class="sv-ts">antérieure de la moelle</text>
+
+              <line x1="146" y1="72" x2="158" y2="72" class="sv-l" marker-end="url(#sy-s2-fl)"/>
+              <line x1="291" y1="72" x2="303" y2="72" class="sv-l" marker-end="url(#sy-s2-fl)"/>
+              <line x1="436" y1="72" x2="448" y2="72" class="sv-l" marker-end="url(#sy-s2-fl)"/>
+              <line x1="581" y1="72" x2="593" y2="72" class="sv-l" marker-end="url(#sy-s2-fl)"/>
+              <line x1="660" y1="115" x2="660" y2="198" class="sv-l" marker-end="url(#sy-s2-fl)"/>
+
+              <!-- Cervelet entre les deux rangées -->
+              <rect x="150" y="134" width="440" height="44" rx="10" class="sv-box2 dash"/>
+              <text x="370" y="153" text-anchor="middle" class="sv-tb">Cervelet</text>
+              <text x="370" y="170" text-anchor="middle" class="sv-ts">reçoit la proprioception, compare le geste prévu et le geste réalisé, corrige</text>
+              <line x1="370" y1="133" x2="370" y2="117" class="sv-lt" marker-end="url(#sy-s2-fl)"/>
+              <line x1="225" y1="199" x2="225" y2="181" class="sv-lt" marker-end="url(#sy-s2-fl)"/>
+
+              <!-- Rangée 2 : nerf et muscle (de droite à gauche) -->
+              <rect x="595" y="200" width="130" height="84" rx="10" class="sv-box"/>
+              <rect x="695" y="205" width="26" height="15" rx="7.5" class="sv-c2"/><text x="708" y="216.5" text-anchor="middle" class="sv-tc">C2</text>
+              <text x="660" y="236" text-anchor="middle" class="sv-tb">Nerf rachidien</text>
+              <text x="660" y="254" text-anchor="middle" class="sv-ts">fibres efférentes</text>
+              <text x="660" y="269" text-anchor="middle" class="sv-ts">(motrices)</text>
+
+              <rect x="450" y="200" width="130" height="84" rx="10" class="sv-box"/>
+              <rect x="550" y="205" width="26" height="15" rx="7.5" class="sv-c3"/><text x="563" y="216.5" text-anchor="middle" class="sv-tc">C3</text>
+              <text x="515" y="236" text-anchor="middle" class="sv-tb">JNM</text>
+              <text x="515" y="254" text-anchor="middle" class="sv-ts">acétylcholine →</text>
+              <text x="515" y="269" text-anchor="middle" class="sv-ts">Ca²⁺ dans la fibre</text>
+
+              <rect x="305" y="200" width="130" height="84" rx="10" class="sv-boxe"/>
+              <rect x="405" y="205" width="26" height="15" rx="7.5" class="sv-c3"/><text x="418" y="216.5" text-anchor="middle" class="sv-tc">C3</text>
+              <text x="370" y="236" text-anchor="middle" class="sv-tb">Contraction</text>
+              <text x="370" y="254" text-anchor="middle" class="sv-ts">Ca²⁺ + ATP : l'actine</text>
+              <text x="370" y="269" text-anchor="middle" class="sv-ts">glisse sur la myosine</text>
+
+              <rect x="160" y="200" width="130" height="84" rx="10" class="sv-box"/>
+              <rect x="260" y="205" width="26" height="15" rx="7.5" class="sv-c3"/><text x="273" y="216.5" text-anchor="middle" class="sv-tc">C3</text>
+              <text x="225" y="236" text-anchor="middle" class="sv-tb">Tendon → os</text>
+              <text x="225" y="254" text-anchor="middle" class="sv-ts">le biceps tire</text>
+              <text x="225" y="269" text-anchor="middle" class="sv-ts">sur le radius</text>
+
+              <rect x="15" y="200" width="130" height="84" rx="10" class="sv-boxh"/>
+              <rect x="115" y="205" width="26" height="15" rx="7.5" class="sv-c3"/><text x="128" y="216.5" text-anchor="middle" class="sv-tc">C3</text>
+              <text x="80" y="236" text-anchor="middle" class="sv-tb">Coude fléchi</text>
+              <text x="80" y="254" text-anchor="middle" class="sv-ts">triceps relâché</text>
+              <text x="80" y="269" text-anchor="middle" class="sv-ts">(antagoniste)</text>
+
+              <line x1="594" y1="242" x2="582" y2="242" class="sv-l" marker-end="url(#sy-s2-fl)"/>
+              <line x1="449" y1="242" x2="437" y2="242" class="sv-l" marker-end="url(#sy-s2-fl)"/>
+              <line x1="304" y1="242" x2="292" y2="242" class="sv-l" marker-end="url(#sy-s2-fl)"/>
+              <line x1="159" y1="242" x2="147" y2="242" class="sv-l" marker-end="url(#sy-s2-fl)"/>
+            </svg>
+          </div>
+          <figcaption><b>Schéma S.2</b> Rangée du haut de gauche à droite (le cerveau décide puis commande), rangée du bas de droite à gauche (le message atteint le muscle). Le cervelet, au milieu, reçoit la position du bras (proprioception) et corrige le cortex en temps réel.</figcaption>
+        </figure>
+
+        <div class="duo">
+          <div class="note piege">
+            <p class="tag">Piège · le côté</p>
+            <p>Les voies motrices se croisent au niveau du bulbe. Un AVC dans le cortex moteur <b>gauche</b> paralyse le côté <b>droit</b> du corps. <a href="cours2.html#c2-somatique">C2</a> · <a href="cours3.html#c3-mouvement-volontaire">C3</a></p>
+          </div>
+          <div class="note piege">
+            <p class="tag">Piège · le tremblement</p>
+            <p>Tremblement <b>pendant</b> le mouvement : cervelet. Tremblement <b>au repos</b> : Parkinson, noyaux gris centraux et substance noire. <a href="cours2.html#c2-cervelet">C2</a> · <a href="cours3.html#c3-mouvement-volontaire">C3</a></p>
+          </div>
+        </div>
+        <div class="note lien">
+          <p class="tag">Lien entre cours</p>
+          <p>Le cours 2 place la maladie de Parkinson dans la <b>substance noire du mésencéphale</b> (neurones à dopamine). Le cours 3 l'associe aux <b>noyaux gris centraux</b>. Les deux sont justes : la substance noire envoie sa dopamine aux noyaux gris centraux, qui programment le mouvement. Si elle meurt, la programmation se dérègle.</p>
+        </div>
+        <div class="note retenir">
+          <p class="tag">À retenir</p>
+          <p>Décider → programmer → exécuter (cortex moteur) → croisement au bulbe → motoneurone de la moelle → nerf rachidien → JNM (ACh) → Ca²⁺ + ATP → glissement actine/myosine → tendon → os → articulation. Le cervelet corrige en continu.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CARTE DES LIENS ===================== -->
+    <section class="chap" id="carte-liens">
+      <header>
+        <p class="eyebrow">Carte des liens</p>
+        <h2>Où les cours se répondent</h2>
+      </header>
+      <div class="prose">
+        <p>Chaque ligne relie une notion à ses échos dans les autres cours. Clique sur un repère pour aller à la fiche correspondante. Ce sont des sujets idéaux pour une question de réflexion.</p>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Thème</th><th>Cours 1</th><th>Cours 2</th><th>Cours 3</th><th>Le lien en une phrase</th></tr></thead>
+          <tbody>
+            <tr>
+              <th scope="row">Deux systèmes de contrôle</th>
+              <td><a href="cours1.html#c1-systemes-homeostasie">SN rapide, endocrine lent</a></td>
+              <td><a href="cours2.html#c2-fonctions">SN = électrique ; SE = hormones</a></td>
+              <td><a href="cours3.html#c3-remodelage">PTH, vitamine D, œstrogènes</a></td>
+              <td>Le SN règle en secondes, les hormones en heures ou en années (le remodelage osseux).</td>
+            </tr>
+            <tr>
+              <th scope="row">Boucle de régulation</th>
+              <td><a href="cours1.html#c1-retro-negatif">détecteur → centre → effecteur</a></td>
+              <td><a href="cours2.html#c2-reflexe">arc réflexe en 5 éléments</a></td>
+              <td><a href="cours3.html#c3-posture">réflexe myotatique, posture</a></td>
+              <td>L'arc réflexe est une boucle de contrôle câblée dans la moelle.</td>
+            </tr>
+            <tr>
+              <th scope="row">Calcium</th>
+              <td><a href="cours1.html#c1-systemes-homeostasie">squelette = réservoir de Ca²⁺</a></td>
+              <td>—</td>
+              <td><a href="cours3.html#c3-remodelage">calcémie, PTH</a> · <a href="cours3.html#c3-contraction">Ca²⁺ de la contraction</a></td>
+              <td>Le Ca²⁺ sanguin est une variable homéostatique ; dans la fibre, c'est lui qui déclenche la contraction.</td>
+            </tr>
+            <tr>
+              <th scope="row">Chaleur</th>
+              <td><a href="cours1.html#c1-retro-negatif">thermorégulation</a></td>
+              <td><a href="cours2.html#c2-autonome">SNA</a></td>
+              <td><a href="cours3.html#c3-fibres-energie">¾ de l'énergie en chaleur</a></td>
+              <td>Le frisson : voir <a href="#frisson">le fil rouge</a>.</td>
+            </tr>
+            <tr>
+              <th scope="row">Tissus</th>
+              <td><a href="cours1.html#c1-tissus">4 tissus</a></td>
+              <td><a href="cours2.html#c2-neurone">tissu nerveux : neurones + glie</a></td>
+              <td><a href="cours3.html#c3-tissu-osseux">os, cartilage, tendon = conjonctifs</a> · <a href="cours3.html#c3-muscles-types">3 muscles</a></td>
+              <td>Le cours 1 donne les catégories, les cours 2 et 3 les détaillent.</td>
+            </tr>
+            <tr>
+              <th scope="row">Enveloppes en poupées russes</th>
+              <td>—</td>
+              <td><a href="cours2.html#c2-nerf">endonèvre, périnèvre, épinèvre</a></td>
+              <td><a href="cours3.html#c3-muscle-organisation">endomysium, périmysium, épimysium</a></td>
+              <td>Même logique : endo = autour d'un élément, péri = autour d'un faisceau, épi = autour du tout.</td>
+            </tr>
+            <tr>
+              <th scope="row">Moelle et muscle</th>
+              <td>—</td>
+              <td><a href="cours2.html#c2-moelle">corne antérieure motrice</a></td>
+              <td><a href="cours3.html#c3-unite-motrice">unité motrice</a></td>
+              <td>Le motoneurone de l'unité motrice a son corps cellulaire dans la corne antérieure.</td>
+            </tr>
+            <tr>
+              <th scope="row">Acétylcholine</th>
+              <td>—</td>
+              <td><a href="cours2.html#c2-somatique">JNM</a> · <a href="cours2.html#c2-autonome">parasympathique</a></td>
+              <td><a href="cours3.html#c3-jnm">récepteurs nicotiniques</a></td>
+              <td>Le même messager commande le muscle squelettique et les organes du parasympathique.</td>
+            </tr>
+            <tr>
+              <th scope="row">Colonne et nerfs</th>
+              <td>—</td>
+              <td><a href="cours2.html#c2-nerfs-craniens-rachidiens">31 paires : 8-12-5-5-1</a></td>
+              <td><a href="cours3.html#c3-axial-appendiculaire">33 vertèbres : 7-12-5-5-4</a></td>
+              <td>8 nerfs cervicaux pour 7 vertèbres cervicales : le 8e sort sous C7.</td>
+            </tr>
+            <tr>
+              <th scope="row">Respiration</th>
+              <td><a href="cours1.html#c1-systemes-homeostasie">O₂, CO₂ et pH</a></td>
+              <td><a href="cours2.html#c2-tronc">centres vitaux du bulbe</a></td>
+              <td><a href="cours3.html#c3-liens-fonctions">diaphragme = muscle squelettique</a></td>
+              <td>Le bulbe commande, le diaphragme exécute, le pH est la variable régulée.</td>
+            </tr>
+            <tr>
+              <th scope="row">Équilibre et posture</th>
+              <td>—</td>
+              <td><a href="cours2.html#c2-cervelet">cervelet</a> · <a href="cours2.html#c2-tronc">tronc cérébral</a></td>
+              <td><a href="cours3.html#c3-posture">proprioception, vestibule, vision</a></td>
+              <td>Le tronc cérébral et le cervelet règlent la posture sans y penser.</td>
+            </tr>
+            <tr>
+              <th scope="row">Côté du corps</th>
+              <td>—</td>
+              <td><a href="cours2.html#c2-lobes">voies croisées</a></td>
+              <td><a href="cours3.html#c3-mouvement-volontaire">paralysie du côté opposé</a></td>
+              <td>Lésion de l'hémisphère gauche → troubles à droite.</td>
+            </tr>
+            <tr>
+              <th scope="row">Sang</th>
+              <td><a href="cours1.html#c1-systemes-homeostasie">moelle osseuse → cellules sanguines</a></td>
+              <td>—</td>
+              <td><a href="cours3.html#c3-squelette">hématopoïèse</a></td>
+              <td>La moelle rouge de l'os spongieux fabrique globules rouges, globules blancs et plaquettes.</td>
+            </tr>
+            <tr>
+              <th scope="row">Maladies auto-immunes</th>
+              <td><a href="cours1.html#c1-maladie">perte d'homéostasie</a></td>
+              <td><a href="cours2.html#c2-pathologies">sclérose en plaques (myéline)</a></td>
+              <td><a href="cours3.html#c3-pathologies">myasthénie (récepteurs) · polyarthrite</a></td>
+              <td>Le système immunitaire attaque une cible de l'organisme lui-même.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ===================== LES GRANDS PIÈGES ===================== -->
+    <section class="chap" id="pieges">
+      <header>
+        <p class="eyebrow">Les grands pièges</p>
+        <h2>Les confusions qui coûtent des points</h2>
+      </header>
+      <div class="prose">
+        <p>Ces paires reviennent sans cesse dans les QCM. Cache la colonne de droite et redis la différence.</p>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Ne confonds pas…</th><th>La bonne distinction</th><th>Cours</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Milieu intérieur / liquide intracellulaire</th><td>Milieu intérieur = liquide <b>extra</b>cellulaire (interstitiel + plasma).</td><td><span class="tagc c1">C1</span></td></tr>
+            <tr><th scope="row">Rétrocontrôle négatif / positif</th><td>Négatif : s'oppose et stabilise (frisson). Positif : amplifie, doit être arrêté (accouchement).</td><td><span class="tagc c1">C1</span></td></tr>
+            <tr><th scope="row">Exocrine / endocrine</th><td>Exocrine : par un canal, vers l'extérieur ou une cavité. Endocrine : hormones dans le sang.</td><td><span class="tagc c1">C1</span></td></tr>
+            <tr><th scope="row">Contrôle intrinsèque / extrinsèque</th><td>Intrinsèque : local, dans l'organe. Extrinsèque : SN + endocrine, depuis l'extérieur de l'organe.</td><td><span class="tagc c1">C1</span></td></tr>
+            <tr><th scope="row">Encéphale / cerveau</th><td>Encéphale = cerveau + cervelet + tronc cérébral.</td><td><span class="tagc c2">C2</span></td></tr>
+            <tr><th scope="row">Oligodendrocyte / cellule de Schwann</th><td>Oligodendrocyte : SNC, plusieurs axones. Schwann : SNP, un seul segment d'un axone.</td><td><span class="tagc c2">C2</span></td></tr>
+            <tr><th scope="row">Substance grise du cerveau / de la moelle</th><td>Cerveau : grise dehors (cortex). Moelle : grise dedans (papillon).</td><td><span class="tagc c2">C2</span></td></tr>
+            <tr><th scope="row">Afférent / efférent</th><td>Afférent : arrive au SNC (sensitif). Efférent : sort du SNC (moteur).</td><td><span class="tagc c2">C2</span></td></tr>
+            <tr><th scope="row">Broca / Wernicke</th><td>Broca : frontal, produire la parole. Wernicke : temporal, comprendre.</td><td><span class="tagc c2">C2</span></td></tr>
+            <tr><th scope="row">Aire motrice / sensitive</th><td>Motrice : devant le sillon central (frontal). Sensitive : derrière (pariétal).</td><td><span class="tagc c2">C2</span></td></tr>
+            <tr><th scope="row">Bulbe / cervelet</th><td>Bulbe : respiration et rythme cardiaque. Cervelet : équilibre et coordination.</td><td><span class="tagc c2">C2</span></td></tr>
+            <tr><th scope="row">Sympathique / parasympathique</th><td>Sympathique : fuite ou combat, noradrénaline, mydriase, thoraco-lombaire. Parasympathique : repos et digestion, acétylcholine, myosis, crânio-sacré.</td><td><span class="tagc c2">C2</span></td></tr>
+            <tr><th scope="row">Ligament / tendon</th><td>Ligament : os ↔ os. Tendon : muscle ↔ os.</td><td><span class="tagc c3">C3</span></td></tr>
+            <tr><th scope="row">Ostéoblaste / ostéoclaste / ostéocyte</th><td>Blaste bâtit, claste casse, cyte capte (il détecte les contraintes).</td><td><span class="tagc c3">C3</span></td></tr>
+            <tr><th scope="row">Squelette axial / appendiculaire</th><td>Axial : crâne, colonne, côtes, sternum. Appendiculaire : membres + ceintures.</td><td><span class="tagc c3">C3</span></td></tr>
+            <tr><th scope="row">Synarthrose / amphiarthrose / diarthrose</th><td>Immobile (sutures) / peu mobile (disques) / très mobile (genou). Plus mobile = moins stable.</td><td><span class="tagc c3">C3</span></td></tr>
+            <tr><th scope="row">Arthrose / ostéoporose</th><td>Arthrose : cartilage usé. Ostéoporose : os moins dense, résorption &gt; formation.</td><td><span class="tagc c3">C3</span></td></tr>
+            <tr><th scope="row">Filaments / sarcomère</th><td>Les filaments ne raccourcissent pas, ils glissent. C'est le sarcomère qui raccourcit.</td><td><span class="tagc c3">C3</span></td></tr>
+            <tr><th scope="row">Origine de l'ACh / du Ca²⁺</th><td>ACh : libérée par le motoneurone. Ca²⁺ : libéré par le réticulum sarcoplasmique de la fibre.</td><td><span class="tagc c3">C3</span></td></tr>
+            <tr><th scope="row">Rôle de l'ATP</th><td>Pivot de la tête de myosine <b>et</b> détachement. Sans ATP : rigidité cadavérique.</td><td><span class="tagc c3">C3</span></td></tr>
+            <tr><th scope="row">Fibres de type II</th><td>« Blanches » en gros, mais les IIa sont rouges ; seules les IIx sont blanches.</td><td><span class="tagc c3">C3</span></td></tr>
+            <tr><th scope="row">Curare / toxine botulique</th><td>Curare : bloque les récepteurs à l'ACh. Botulique : empêche la libération d'ACh.</td><td><span class="tagc c3">C3</span></td></tr>
+            <tr><th scope="row">Tremblement d'action / de repos</th><td>Pendant le geste : cervelet. Au repos : Parkinson.</td><td><span class="tagc c2">C2</span> <span class="tagc c3">C3</span></td></tr>
+            <tr><th scope="row">7 vertèbres / 8 nerfs cervicaux</th><td>7 vertèbres cervicales, mais 8 paires de nerfs cervicaux.</td><td><span class="tagc c2">C2</span> <span class="tagc c3">C3</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ===================== MNÉMOS (généré par _tools/make_mnemos.py) ===================== -->
+    <section class="chap" id="mnemos">
+      <header>
+        <p class="eyebrow">Tous les mnémos</p>
+        <h2>Les moyens mnémotechniques des trois cours</h2>
+      </header>
+      <div class="prose">
+        <p>Tous les moyens mnémotechniques des fiches, rassemblés ici pour les réviser d'un coup. Pour chacun, cache le texte, récite la liste, puis vérifie. Le lien ramène à la notion complète.</p>
+      </div>
+      <div class="notion">
+        <h3>Cours 1 · Homéostasie <span class="src">13 mnémos</span></h3>
+        <div class="mnemo-grid">
+          <div class="note mnemo">
+            <p class="tag">Les 6 niveaux d'organisation · les 6 niveaux dans l'ordre</p>
+            <p>« <b>Ch</b>aque <b>C</b>ellule <b>T</b>isse des <b>O</b>rganes qui <b>S</b>ervent l'<b>O</b>rganisme » → <b>Ch</b>imique, <b>C</b>ellulaire, <b>T</b>issulaire, <b>O</b>rgane, <b>S</b>ystème, <b>O</b>rganisme.</p>
+          <p>Image : des <b>lettres</b> (atomes) forment des <b>mots</b> (molécules), puis des <b>phrases</b> (cellules), des <b>paragraphes</b> (tissus), des <b>chapitres</b> (organes), des <b>tomes</b> (systèmes) et enfin <b>la collection complète</b> (l'organisme).</p>
+            <p class="muted"><a href="cours1.html#c1-niveaux">Voir la notion →</a></p>
+          </div>
+          <div class="note mnemo">
+            <p class="tag">Les 6 niveaux d'organisation</p>
+            <p><b>Les 4 atomes</b> : <b>CHON</b>, comme « co<b>CHON</b> » sans le « co ». Attention : <b>N = azote</b> (pas le sodium, qui s'écrit Na).</p>
+          <p><b>Les 4 familles de molécules</b> : « <b>P</b>our <b>L</b>e <b>G</b>oûter, des <b>A</b>bricots » → <b>P</b>rotéines, <b>L</b>ipides, <b>G</b>lucides, <b>A</b>cides nucléiques.</p>
+            <p class="muted"><a href="cours1.html#c1-niveaux">Voir la notion →</a></p>
+          </div>
+          <div class="note mnemo">
+            <p class="tag">La cellule, unité de base de la vie · les 8 fonctions</p>
+            <p>Trois groupes rythmés : « <b>Entrer, Brûler, Jeter</b> — <b>Fabriquer, Filtrer, Déplacer</b> — <b>Réagir, Recopier</b> ». (3 + 3 + 2 = 8.)</p>
+            <p class="muted"><a href="cours1.html#c1-cellule">Voir la notion →</a></p>
+          </div>
+          <div class="note mnemo">
+            <p class="tag">Les 4 types de tissus</p>
+            <p><b>EXO</b>crine = <b>EX</b>it par un canal vers l'<b>EX</b>térieur (ou une cavité). <b>ENDO</b>crine = <b>EN</b>tre <b>D</b>irectement dans le sang (pas de canal) → hormones.</p>
+            <p class="muted"><a href="cours1.html#c1-tissus">Voir la notion →</a></p>
+          </div>
+          <div class="note mnemo">
+            <p class="tag">Les 4 types de tissus · conjonctif spécialisé</p>
+            <p>Trois verbes : ce qui <b>soutient</b> (os, cartilage), ce qui <b>stocke</b> (tissu adipeux), ce qui <b>circule</b> (sang, lymphe).</p>
+            <p class="muted"><a href="cours1.html#c1-tissus">Voir la notion →</a></p>
+          </div>
+          <div class="note mnemo">
+            <p class="tag">Les 4 types de tissus · les 4 tissus</p>
+            <p>« <b>C</b>e <b>M</b>ec <b>E</b>st <b>N</b>erveux » → <b>C</b>onjonctif, <b>M</b>usculaire, <b>É</b>pithélial, <b>N</b>erveux.</p>
+          <p>Image de la maison : l'<b>épithélium</b> = le carrelage et la peinture (revêtement), le <b>conjonctif</b> = le béton et la charpente (soutien), le <b>muscle</b> = les moteurs des volets (mouvement), le <b>nerveux</b> = les câbles électriques (commande).</p>
+            <p class="muted"><a href="cours1.html#c1-tissus">Voir la notion →</a></p>
+          </div>
+          <div class="note mnemo">
+            <p class="tag">Organes, 11 systèmes, organisme · les 11 systèmes (dans l'ordre des diapos)</p>
+            <p>« <b>C</b>inq <b>D</b>octeurs <b>R</b>éunis <b>U</b>tilisent <b>S</b>ix <b>M</b>icroscopes ; <b>T</b>ous <b>I</b>nspectent <b>N</b>os <b>É</b>chantillons <b>R</b>ares. »</p>
+          <p>→ <b>C</b>irculatoire, <b>D</b>igestif, <b>R</b>espiratoire, <b>U</b>rinaire, <b>S</b>quelette, <b>M</b>usculaire ; <b>T</b>égumentaire, <b>I</b>mmunitaire, <b>N</b>erveux, <b>E</b>ndocrine, <b>R</b>eproducteur.</p>
+          <p>Et pour vérifier que tu n'en oublies aucun : la règle <b>4-3-2-1-1</b> du schéma 1.4.</p>
+            <p class="muted"><a href="cours1.html#c1-organes-systemes">Voir la notion →</a></p>
+          </div>
+          <div class="note mnemo">
+            <p class="tag">Le milieu intérieur : le « bain » de nos cellules</p>
+            <p><b>INTRA</b> = <b>dans</b> la cellule · <b>EXTRA</b> = <b>autour</b> · <b>INTER</b>stitiel = <b>entre</b> les cellules. Et l'équation à savoir par cœur : <b>LEC = interstitiel + plasma = milieu intérieur</b>.</p>
+            <p class="muted"><a href="cours1.html#c1-milieu-interieur">Voir la notion →</a></p>
+          </div>
+          <div class="note mnemo">
+            <p class="tag">L'homéostasie, un équilibre dynamique · les variables régulées</p>
+            <p>Pense à une <b>soupe</b> qu'on garde parfaite : <b>2 gaz</b> (O<sub>2</sub>, CO<sub>2</sub>), <b>les courses et la poubelle</b> (nutriments, déchets), <b>l'eau, le sel et l'acidité</b> (H<sub>2</sub>O, NaCl/électrolytes, pH), <b>la casserole</b> (volume, pression) et <b>2 chiffres par cœur</b> : <b>37 °C</b> et <b>1 g/L</b> de glucose.</p>
+            <p class="muted"><a href="cours1.html#c1-homeostasie">Voir la notion →</a></p>
+          </div>
+          <div class="note mnemo">
+            <p class="tag">Ce que chaque système apporte à l'homéostasie · qui élimine quoi ?</p>
+            <p>« <b>Les poumons soufflent le gaz, les reins lavent le reste, l'intestin vide les restes de repas.</b> » Poumons → CO<sub>2</sub> ; reins → excès d'eau, de sel, d'acide et déchets autres que CO<sub>2</sub> ; intestin → fèces.</p>
+            <p class="muted"><a href="cours1.html#c1-systemes-homeostasie">Voir la notion →</a></p>
+          </div>
+          <div class="note mnemo">
+            <p class="tag">Détecter, intégrer, ajuster : local ou global</p>
+            <p>Une boucle de contrôle, c'est une « <b>Cie</b> » (une compagnie) : <b>C</b>apteur → <b>I</b>ntégrateur → <b>E</b>ffecteur. Ou en verbes : <b>D</b>étecter, <b>I</b>ntégrer, <b>A</b>juster = « <b>DIA</b> », comme les diapos du cours.</p>
+            <p class="muted"><a href="cours1.html#c1-controle">Voir la notion →</a></p>
+          </div>
+          <div class="note mnemo">
+            <p class="tag">Le rétrocontrôle négatif : corriger l'écart</p>
+            <p>Rétrocontrôle <b>N</b>égatif = il <b>N</b>eutralise l'écart et ramène à la <b>N</b>orme. Il dit « <b>NON</b> » au changement.</p>
+            <p class="muted"><a href="cours1.html#c1-retro-negatif">Voir la notion →</a></p>
+          </div>
+          <div class="note mnemo">
+            <p class="tag">Le rétrocontrôle positif : amplifier</p>
+            <p>Rétrocontrôle <b>P</b>ositif = « <b>P</b>lus, <b>P</b>lus, <b>P</b>lus » : il <b>P</b>ousse toujours plus loin, comme une boule de neige qui dévale la pente. <b>N</b>égatif = <b>N</b>eutralise ; <b>P</b>ositif = <b>P</b>ropulse.</p>
+            <p class="muted"><a href="cours1.html#c1-retro-positif">Voir la notion →</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="notion">
+        <h3>Cours 2 · Système nerveux <span class="src">21 mnémos</span></h3>
+        <div class="mnemo-grid">
+          <div class="note mnemo">
+            <p class="tag">Les 3 fonctions du système nerveux</p>
+            <p>« Le système nerveux te <b>D.I.R.</b>ige » : <b>D</b>étecter → <b>I</b>ntégrer → <b>R</b>épondre. Toujours dans cet ordre.</p>
+            <p class="muted"><a href="cours2.html#c2-fonctions">Voir la notion →</a></p>
+          </div>
+          <div class="note mnemo">
+            <p class="tag">Organisation : SNC et SNP</p>
+            <p><b>C</b>entral = <b>C</b>aché dans les os : <b>C</b>râne + <b>C</b>olonne. <b>P</b>ériphérique = <b>P</b>artout ailleurs.</p>
+          <p><b>S</b>omatique = <b>S</b>ous ta volonté (muscles <b>S</b>quelettiques). <b>A</b>utonome = <b>A</b>utomatique.</p>
+            <p class="muted"><a href="cours2.html#c2-organisation">Voir la notion →</a></p>
+          </div>
+          <div class="note mnemo">
+            <p class="tag">Le neurone</p>
+            <p>Le sens du message : « <b>D</b>es <b>C</b>adeaux <b>A</b>rrivent <b>T</b>oujours » = <b>D</b>endrites → <b>C</b>orps cellulaire → <b>A</b>xone → <b>T</b>erminaisons. Les cadeaux (les messages) arrivent par les dendrites et repartent par les terminaisons.</p>
+            <p class="muted"><a href="cours2.html#c2-neurone">Voir la notion →</a></p>
+          </div>
+          <div class="note mnemo">
+            <p class="tag">Les cellules gliales (la glie)</p>
+            <p><b>A.M.E.M.</b> — chaque type fait l'action qui commence par sa propre lettre :</p>
+          <ul>
+            <li><b>A</b>strocyte → <b>A</b>pprovisionne (nourrit) les neurones</li>
+            <li><b>M</b>icroglie → <b>M</b>ange les microbes et les débris</li>
+            <li><b>É</b>pendymaire → <b>É</b>tend un revêtement sur les parois des cavités</li>
+            <li><b>M</b>yélinisante → <b>M</b>et la gaine de myéline autour de l'axone</li>
+          </ul>
+            <p class="muted"><a href="cours2.html#c2-glie">Voir la notion →</a></p>
+          </div>
+          <div class="note mnemo">
+            <p class="tag">La myéline : une gaine isolante</p>
+            <p><b>S</b>chwann = <b>S</b>eul <b>S</b>egment, il <b>S</b>'enroule… et il vit sur les nerfs du <b>SNP</b>.</p>
+          <p><b>O</b>ligodendrocyte = l'<b>O</b>ctopus (la pieuvre) du <b>SNC</b> : un seul corps au centre, quelques bras, chacun enroulé autour d'un axone différent.</p>
+            <p class="muted"><a href="cours2.html#c2-myeline">Voir la notion →</a></p>
+          </div>
+          <div class="note mnemo">
+            <p class="tag">Substance grise et substance blanche</p>
+            <p><b>C</b>erveau → <b>C</b>ortex gris (la <b>C</b>ouche du dessus est grise). <b>M</b>oelle → <b>M</b>ilieu gris. Et le blanc est toujours là où courent les axones myélinisés.</p>
+            <p class="muted"><a href="cours2.html#c2-substances">Voir la notion →</a></p>
+          </div>
+          <div class="note mnemo">
+            <p class="tag">Le nerf</p>
+            <p><b>De dehors en dedans : ÉPI → PÉRI → ENDO.</b> Épi comme <b>épi</b>derme (dessus), péri comme <b>péri</b>mètre (autour), endo comme <b>endo</b>scopie (dedans).</p>
+          <p><b>A</b>fférent → <b>A</b>rrive au SNC. <b>E</b>fférent → <b>E</b>xit (ça sort du SNC) vers l'<b>E</b>ffecteur.</p>
+            <p class="muted"><a href="cours2.html#c2-nerf">Voir la notion →</a></p>
+          </div>
+          <div class="note mnemo">
+            <p class="tag">L'encéphale : vue d'ensemble</p>
+            <p>L'encéphale, c'est <b>« 2 C + 1 T »</b> : <b>C</b>erveau, <b>C</b>ervelet, <b>T</b>ronc cérébral. Le cerveau n'est que l'un des trois.</p>
+            <p class="muted"><a href="cours2.html#c2-encephale">Voir la notion →</a></p>
+          </div>
+          <div class="note mnemo">
+            <p class="tag">Le cerveau : hémisphères, lobes et cartes du corps</p>
+            <p>Les 4 lobes, d'avant en arrière, avec leur fonction : <b>F</b>rontal = <b>F</b>aire (décider, bouger, parler) · <b>P</b>ariétal = <b>P</b>alper (sentir son corps) · <b>T</b>emporal = <b>T</b>ympan (entendre) et souvenirs · <b>O</b>ccipital = <b>O</b>eil (voir).</p>
+          <p><b>B</b>roca = <b>B</b>ouche (produire les mots, à l'avant comme la bouche). Wernicke = près de l'oreille (comprendre ce qu'on entend).</p>
+          <p>Autour du sillon central : <b>M</b> avant <b>S</b>, comme dans l'alphabet → <b>M</b>oteur devant, <b>S</b>ensitif derrière.</p>
+            <p class="muted"><a href="cours2.html#c2-lobes">Voir la notion →</a></p>
+          </div>
+          <div class="note mnemo">
+            <p class="tag">Le tronc cérébral</p>
+            <p>De haut en bas : « <b>M</b>on <b>P</b>etit <b>B</b>ulbe » = <b>M</b>ésencéphale → <b>P</b>ont → <b>B</b>ulbe. Le bulbe est en bas, juste au-dessus de la moelle (il en a d'ailleurs le nom : moelle allongée).</p>
+            <p class="muted"><a href="cours2.html#c2-tronc">Voir la notion →</a></p>
+          </div>
+          <div class="note mnemo">
+            <p class="tag">Le cervelet</p>
+            <p>Le cervelet est l'<b>« Équilibriste-Coordinateur »</b>. Ses signes de lésion font <b>A-T-H-É</b> : <b>A</b>taxie, <b>T</b>remblement d'action, <b>H</b>ypotonie, <b>É</b>quilibre perturbé.</p>
+            <p class="muted"><a href="cours2.html#c2-cervelet">Voir la notion →</a></p>
+          </div>
+          <div class="note mnemo">
+            <p class="tag">La moelle épinière</p>
+            <p>« <b>P</b>ostérieur = <b>P</b>erçoit, <b>A</b>ntérieur = <b>A</b>git. » Le message sensitif entre par l'arrière, l'ordre moteur sort par l'avant.</p>
+            <p class="muted"><a href="cours2.html#c2-moelle">Voir la notion →</a></p>
+          </div>
+          <div class="note mnemo">
+            <p class="tag">La protection du SNC : os, méninges, LCR</p>
+            <p><b>D.A.P.</b>, de <b>D</b>ehors vers le cerveau : <b>D</b>ure-mère → <b>A</b>rachnoïde → <b>P</b>ie-mère. La <b>D</b>ure-mère est <b>D</b>ure et <b>D</b>ehors ; la <b>P</b>ie-mère est <b>P</b>laquée contre le cerveau.</p>
+          <p>Le LCR est <b>S</b>ous l'arachnoïde : espace <b>S</b>ous-arachnoïdien (entre <b>A</b> et <b>P</b>).</p>
+            <p class="muted"><a href="cours2.html#c2-protection">Voir la notion →</a></p>
+          </div>
+          <div class="note mnemo">
+            <p class="tag">Vascularisation et barrière hémato-encéphalique</p>
+            <p>Reconnaître un AVC et réagir (campagne de santé publique, hors diapo) : <b>V.I.T.E.</b> = <b>V</b>isage paralysé (bouche de travers), <b>I</b>nertie d'un membre, <b>T</b>rouble de la parole, <b>E</b>n urgence, appeler le <b>15</b>.</p>
+            <p class="muted"><a href="cours2.html#c2-bhe">Voir la notion →</a></p>
+          </div>
+          <div class="note mnemo">
+            <p class="tag">Nerfs crâniens et nerfs rachidiens · les 12 nerfs crâniens dans l'ordre</p>
+            <p>« <b>O</b>h ! <b>O</b>h ! <b>O</b>h ! <b>T</b>ante <b>T</b>hérèse <b>A</b>ime <b>F</b>ollement <b>V</b>ictor ; <b>G</b>érard <b>V</b>ient <b>A</b>vec <b>H</b>élène. »</p>
+          <p>= <b>O</b>lfactif, <b>O</b>ptique, <b>O</b>culomoteur, <b>T</b>rochléaire, <b>T</b>rijumeau, <b>A</b>bducens, <b>F</b>acial, <b>V</b>estibulocochléaire, <b>G</b>lossopharyngien, <b>V</b>ague, <b>A</b>ccessoire, <b>H</b>ypoglosse.</p>
+          <p>La version « classique » que tu entendras peut-être utilise les <b>anciens noms</b> : « <b>O</b>h <b>O</b>scar, <b>m</b>a <b>p</b>etite <b>T</b>hérèse <b>m</b>e <b>f</b>ait <b>a</b>imer <b>g</b>rand-mère <b>p</b>our <b>s</b>on <b>g</b>rand <b>h</b>ôpital » = olfactif, optique, <b>m</b>oteur oculaire commun (= oculomoteur III), <b>p</b>athétique (= trochléaire IV), trijumeau, <b>m</b>oteur oculaire externe (= abducens VI), facial, <b>a</b>uditif (= vestibulocochléaire VIII), glossopharyngien, <b>p</b>neumogastrique (= vague X), <b>s</b>pinal (= accessoire XI), <b>g</b>rand <b>h</b>ypoglosse (= hypoglosse XII).</p>
+            <p class="muted"><a href="cours2.html#c2-nerfs-craniens-rachidiens">Voir la notion →</a></p>
+          </div>
+          <div class="note mnemo">
+            <p class="tag">Nerfs crâniens et nerfs rachidiens · leur nature (S = sensitif/sensoriel, M = moteur, D = les Deux = mixte)</p>
+            <p>« <b>S</b>ophie <b>S</b>ait <b>M</b>anger <b>M</b>ais <b>D</b>éteste <b>M</b>anger <b>D</b>es <b>S</b>ardines ; <b>D</b>es <b>D</b>attes ? <b>M</b>iam, <b>M</b>iam ! »</p>
+          <p>= I S · II S · III M · IV M · V D · VI M · VII D · VIII S · IX D · X D · XI M · XII M. Seuls <b>V, VII, IX et X</b> sont mixtes : les nerfs crâniens ne sont donc <b>pas tous mixtes</b>, contrairement aux nerfs rachidiens.</p>
+            <p class="muted"><a href="cours2.html#c2-nerfs-craniens-rachidiens">Voir la notion →</a></p>
+          </div>
+          <div class="note mnemo">
+            <p class="tag">Nerfs crâniens et nerfs rachidiens · les 31 paires rachidiennes</p>
+            <p><b>8 – 12 – 5 – 5 – 1 = 31</b>, comme les <b>31 jours</b> d'un grand mois. Astuce : c'est le découpage des vertèbres (7 – 12 – 5 – 5 – 4) avec <b>un nerf de plus au cou</b> (8 au lieu de 7) et <b>un seul nerf au coccyx</b> (au lieu de 4 vertèbres).</p>
+            <p class="muted"><a href="cours2.html#c2-nerfs-craniens-rachidiens">Voir la notion →</a></p>
+          </div>
+          <div class="note mnemo">
+            <p class="tag">Le SN somatique : la motricité volontaire</p>
+            <p>La voie motrice, c'est « <b>2 neurones, 1 croisement, 1 molécule</b> » : neurone 1 dans le <b>C</b>ortex → <b>C</b>roisement au bulbe → neurone 2 dans la <b>C</b>orne antérieure → <b>C</b>âble (nerf rachidien) → <b>C</b>ontraction grâce à l'<b>A</b>cétylcholine. Les « 5 C ».</p>
+            <p class="muted"><a href="cours2.html#c2-somatique">Voir la notion →</a></p>
+          </div>
+          <div class="note mnemo">
+            <p class="tag">Le réflexe : une réponse automatique</p>
+            <p>« <b>R</b>apide, <b>S</b>ans <b>C</b>erveau, <b>M</b>on <b>E</b>nfant ! » = <b>R</b>écepteur → neurone <b>S</b>ensitif → <b>C</b>entre (moelle) → neurone <b>M</b>oteur → <b>E</b>ffecteur. La phrase rappelle en plus les deux caractéristiques du réflexe : rapide et sans le cerveau.</p>
+            <p class="muted"><a href="cours2.html#c2-reflexe">Voir la notion →</a></p>
+          </div>
+          <div class="note mnemo">
+            <p class="tag">Le SN autonome (involontaire)</p>
+            <ul>
+            <li><b>S</b>ympathique = <b>S</b>ituation de <b>S</b>tress, <b>S</b>port, <b>S</b>peed (ça accélère).</li>
+            <li><b>P</b>arasympathique = <b>P</b>ause, <b>P</b>ipi (miction), <b>P</b>éristaltisme (digestion), <b>P</b>upille <b>P</b>etite (myosis).</li>
+            <li>My<b>D</b>riase = pupille gran<b>D</b>e, <b>D</b>ilatée (sympathique) ; my<b>O</b>sis = pupille réduite à un petit « <b>o</b> », fermée (parasympathique).</li>
+            <li>Les origines : le parasympathique est aux <b>deux bouts</b> (crâne + sacrum), il encadre le sympathique placé au milieu (thorax + lombes), comme des <b>PARA</b>nthèses.</li>
+            <li>Les messagers : le <b>Para</b> reste <b>A</b>ssis et <b>C</b>alme → <b>AC</b>étylcholine ; le sympathique est sous adrénaline → <b>noradrénaline</b> à l'organe (et adrénaline par la surrénale).</li>
+          </ul>
+            <p class="muted"><a href="cours2.html#c2-autonome">Voir la notion →</a></p>
+          </div>
+          <div class="note mnemo">
+            <p class="tag">Quand le système nerveux dysfonctionne</p>
+            <p><b>A</b>lzheimer = <b>A</b>mnésie (hippocampe). <b>P</b>arkinson = <b>P</b>as lents, tremblement au re<b>P</b>os (dopamine, substance noire). <b>SEP</b> = <b>S</b>ans <b>E</b>nveloppe <b>P</b>rotectrice (myéline du SNC).</p>
+            <p class="muted"><a href="cours2.html#c2-pathologies">Voir la notion →</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="notion">
+        <h3>Cours 3 · Locomotion <span class="src">18 mnémos</span></h3>
+        <div class="mnemo-grid">
+          <div class="note mnemo">
+            <p class="tag">Le squelette : 206 os et 5 fonctions · les 5 fonctions</p>
+            <p>« <b>S</b>ous <b>M</b>a <b>P</b>eau, <b>R</b>ien d'<b>H</b>orrible » (juste mon squelette !) = <b>S</b>outien, <b>M</b>ouvement, <b>P</b>rotection, <b>R</b>éserve minérale, <b>H</b>ématopoïèse.</p>
+            <p class="muted"><a href="cours3.html#c3-squelette">Voir la notion →</a></p>
+          </div>
+          <div class="note mnemo">
+            <p class="tag">Squelette axial et squelette appendiculaire · 7-12-5-5-4</p>
+            <p>« <b>Petit-déj à 7 h, déjeuner à 12 h, goûter à 5 h</b>… puis on s'assoit sur le <b>sacrum (5)</b> et on finit sur le <b>coccyx (4)</b>. »</p>
+          <p>Autre version, logique : <b>7</b> jours dans la semaine pour le cou qui tourne chaque jour ; <b>12</b> thoraciques comme les <b>12 paires de côtes</b> (une paire par vertèbre) ; <b>5</b> lombaires comme les 5 doigts de la main posée sur les reins. Les 24 vertèbres mobiles = les <b>24 heures</b> d'une journée ; les 9 dernières sont soudées.</p>
+            <p class="muted"><a href="cours3.html#c3-axial-appendiculaire">Voir la notion →</a></p>
+          </div>
+          <div class="note mnemo">
+            <p class="tag">Le tissu osseux : un tissu vivant</p>
+            <p>Celui de la diapo : ostéo<b>B</b>laste = <b>B</b>âtir ; ostéo<b>C</b>laste = <b>C</b>asser. Un deuxième pour verrouiller : <b>-blaste</b> = « bébé » bâtisseur (comme un blastocyste, un tout jeune embryon) ; <b>-claste</b> = qui brise (un iconoclaste brise les images). Et <b>-cyte</b> = la cellule « installée », emmurée dans sa logette : le capteur.</p>
+            <p class="muted"><a href="cours3.html#c3-tissu-osseux">Voir la notion →</a></p>
+          </div>
+          <div class="note mnemo">
+            <p class="tag">Les articulations : classification</p>
+            <p>De la moins à la plus mobile : <b>S – A – D</b>. <b>S</b>yn = <b>S</b>oudé ; <b>A</b>mphi = <b>À</b> moitié ; <b>D</b>ia = <b>D</b>ansant. Et dans le même ordre pour la structure : <b>F</b>ibreuse, <b>C</b>artilagineuse, <b>S</b>ynoviale = « <b>F</b>il, <b>C</b>oussin, <b>S</b>avon » (un fil qui coud, un coussin qui amortit, du savon qui fait glisser).</p>
+            <p class="muted"><a href="cours3.html#c3-articulations">Voir la notion →</a></p>
+          </div>
+          <div class="note mnemo">
+            <p class="tag">L'articulation fibreuse (synarthrose) · les 3 synarthroses</p>
+            <p>« <b>S</b>ur la <b>S</b>cène, la <b>G</b>uitare » : <b>S</b>utures (crâne), <b>S</b>yndesmoses (deux os jumeaux de l'avant-bras ou de la jambe), <b>G</b>omphoses (dents).</p>
+            <p class="muted"><a href="cours3.html#c3-synarthrose">Voir la notion →</a></p>
+          </div>
+          <div class="note mnemo">
+            <p class="tag">Les ligaments</p>
+            <p>« <b>LIG</b>ament = il <b>LI</b>e deux os » (du latin <i>ligare</i>, lier, comme une ligature). « <b>TEN</b>don = il <b>TEN</b>d le muscle jusqu'à l'os » (du latin <i>tendere</i>, tendre).</p>
+            <p class="muted"><a href="cours3.html#c3-ligaments">Voir la notion →</a></p>
+          </div>
+          <div class="note mnemo">
+            <p class="tag">Les mouvements articulaires</p>
+            <p><b>AB</b>duction = <b>AB</b>sent, le bras part loin du corps ; <b>AD</b>duction = <b>AD</b>hérer, le bras revient se coller au corps.</p>
+          <p><b>SU</b>pination = paume vers le haut pour porter la <b>SOU</b>pe ; <b>PRO</b>nation = la main se <b>PRO</b>sterne, face (la paume) contre le sol.</p>
+            <p class="muted"><a href="cours3.html#c3-mouvements">Voir la notion →</a></p>
+          </div>
+          <div class="note mnemo">
+            <p class="tag">Les 3 types de tissu musculaire</p>
+            <p>« <b>Le cœur a des rayures, mais il n'obéit à personne.</b> » Et le lisse est « lisse comme les parois » : on le trouve dans les tuyaux du corps (intestin, vaisseaux, bronches).</p>
+            <p class="muted"><a href="cours3.html#c3-muscles-types">Voir la notion →</a></p>
+          </div>
+          <div class="note mnemo">
+            <p class="tag">Organisation du muscle squelettique · de dehors en dedans</p>
+            <p><b>ÉPI → PÉRI → ENDO</b>, comme des mots que tu connais : l'<b>épi</b>derme est <b>sur</b> la peau, le <b>péri</b>phérique fait le tour <b>autour</b> de la ville, l'<b>endo</b>scopie regarde <b>dedans</b>.</p>
+            <p class="muted"><a href="cours3.html#c3-muscle-organisation">Voir la notion →</a></p>
+          </div>
+          <div class="note mnemo">
+            <p class="tag">La contraction : le glissement des filaments</p>
+            <p>« <b>La bande A ne bouge pAs</b> ; <b>H</b> et <b>I</b> rétrécissent. » Et pour le cycle : « <b>A</b>rmer, <b>F</b>ixer, <b>P</b>ivoter, <b>S</b>éparer » = « <b>À F</b>ond, <b>P</b>uis <b>S</b>top » (comme un rameur : lever la rame, la plonger, tirer, la sortir de l'eau).</p>
+            <p class="muted"><a href="cours3.html#c3-contraction">Voir la notion →</a></p>
+          </div>
+          <div class="note mnemo">
+            <p class="tag">Tendons et muscles antagonistes</p>
+            <p><b>B</b>iceps = <b>B</b>ras plié ; <b>T</b>riceps = bras <b>T</b>endu.</p>
+            <p class="muted"><a href="cours3.html#c3-tendons-antagonistes">Voir la notion →</a></p>
+          </div>
+          <div class="note mnemo">
+            <p class="tag">Types de fibres et sources d'énergie</p>
+            <p>« Type <b>1</b> = <b>1</b> marathon » : lent, rouge, endurant. Pour les 3 voies : « <b>Allumette, Turbo, Diesel</b> » = phosphocréatine (flambe 10 s), glycolyse (coup de boost 1-2 min), aérobie (démarre lentement mais roule des heures).</p>
+            <p class="muted"><a href="cours3.html#c3-fibres-energie">Voir la notion →</a></p>
+          </div>
+          <div class="note mnemo">
+            <p class="tag">L'unité motrice</p>
+            <p><b>P</b>etite unité = <b>P</b>récision ; <b>G</b>rande unité = <b>G</b>ros effort. Pour plus de force : « <b>plus de soldats, qui tirent plus souvent</b> » (recrutement + fréquence).</p>
+            <p class="muted"><a href="cours3.html#c3-unite-motrice">Voir la notion →</a></p>
+          </div>
+          <div class="note mnemo">
+            <p class="tag">La jonction neuromusculaire et le couplage avec la contraction · les 6 étapes</p>
+            <p>« <b>PARTiR</b>… puis <b>G</b>lisser » : <b>P</b>otentiel d'action → <b>A</b>Ch → <b>R</b>écepteurs nicotiniques → <b>T</b>ubules T → (i) → <b>R</b>éticulum (Ca²⁺) → <b>G</b>lissement.</p>
+            <p class="muted"><a href="cours3.html#c3-jnm">Voir la notion →</a></p>
+          </div>
+          <div class="note mnemo">
+            <p class="tag">Le maintien de la posture · les 3 entrées</p>
+            <p>« <b>P</b>our <b>V</b>oir <b>V</b>ertical » = <b>P</b>roprioception, <b>V</b>estibule, <b>V</b>ision. Ou, avec le corps : les <b>pieds</b> sentent le sol, l'<b>oreille</b> sent la tête pencher, les <b>yeux</b> voient l'horizon.</p>
+            <p class="muted"><a href="cours3.html#c3-posture">Voir la notion →</a></p>
+          </div>
+          <div class="note mnemo">
+            <p class="tag">Le mouvement volontaire : de l'intention au geste</p>
+            <p>« <b>Idée → Plan → Action</b>, et le cervelet <b>contrôle</b> » = Initiation, Programmation, Exécution + comparateur.</p>
+            <p class="muted"><a href="cours3.html#c3-mouvement-volontaire">Voir la notion →</a></p>
+          </div>
+          <div class="note mnemo">
+            <p class="tag">Liens avec les autres fonctions · les 7 lignes du tableau</p>
+            <p>« <b>N</b>ina <b>C</b>ourt <b>R</b>apidement <b>S</b>ous un <b>É</b>té <b>D</b>oux, <b>U</b>ltra-chaud » = <b>N</b>erveuse, <b>C</b>ardiovasculaire, <b>R</b>espiratoire, <b>S</b>anguine et immunitaire, <b>E</b>ndocrinienne, <b>D</b>igestive, <b>U</b>rinaire et thermorégulation (chaud = frisson).</p>
+            <p class="muted"><a href="cours3.html#c3-liens-fonctions">Voir la notion →</a></p>
+          </div>
+          <div class="note mnemo">
+            <p class="tag">Quand l'appareil locomoteur dysfonctionne</p>
+            <p>Les suffixes disent tout : <b>-ose</b> = usure, dégénérescence (arthr<b>ose</b>) ; <b>-ite</b> = inflammation (arthr<b>ite</b>, tendin<b>ite</b>) ; ostéo-<b>porose</b> = os plein de <b>pores</b>.</p>
+            <p class="muted"><a href="cours3.html#c3-pathologies">Voir la notion →</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EXAMEN BLANC ===================== -->
+    <section class="chap" id="examen-blanc">
+      <header>
+        <p class="eyebrow">Examen blanc mélangé</p>
+        <h2>24 QCM et 6 questions de réflexion, les trois cours mélangés</h2>
+      </header>
+      <div class="prose">
+        <p>Comme au CCF, les questions arrivent dans le désordre et peuvent avoir <b>une ou plusieurs</b> bonnes réponses. Fais toute la série sans regarder les fiches, puis clique sur « Corriger toute la série ». Vise au moins 18/24 avant le contrôle.</p>
+      </div>
+
+      <div class="serie" id="serie-blanc">
+        <header><h3>Partie A · QCM</h3></header>
+        <p class="consigne">Une ou plusieurs réponses justes. Une question n'est juste que si tu coches exactement les bonnes réponses.</p>
+
+        <div class="qcm" data-answer="B,C">
+          <p class="q"><span class="qn">1</span><span class="q-body">Le milieu intérieur correspond :</span><span class="lvl n1">C1</span></p>
+          <ol class="opts">
+            <li data-k="A">au liquide intracellulaire</li>
+            <li data-k="B">au liquide interstitiel et au plasma</li>
+            <li data-k="C">au liquide extracellulaire</li>
+            <li data-k="D">à l'environnement dans lequel vit l'organisme</li>
+            <li data-k="E">au cytoplasme des cellules musculaires</li>
+          </ol>
+          <div class="corr"><p class="tag">Correction</p><ul class="why">
+            <li class="ko"><b>A — Faux.</b> Le liquide intracellulaire est à l'intérieur des cellules ; le milieu intérieur les entoure.</li>
+            <li class="ok"><b>B — Vrai.</b> Liquide extracellulaire = liquide interstitiel (entre les cellules) + plasma (dans les vaisseaux).</li>
+            <li class="ok"><b>C — Vrai.</b> C'est la définition : à l'extérieur des cellules mais à l'intérieur de l'organisme.</li>
+            <li class="ko"><b>D — Faux.</b> Ça, c'est l'environnement extérieur.</li>
+            <li class="ko"><b>E — Faux.</b> Le cytoplasme est intracellulaire.</li>
+          </ul></div>
+        </div>
+
+        <div class="qcm" data-answer="B,C,E">
+          <p class="q"><span class="qn">2</span><span class="q-body">Les cellules de Schwann :</span><span class="lvl n1">C2</span></p>
+          <ol class="opts">
+            <li data-k="A">forment la myéline dans le SNC</li>
+            <li data-k="B">myélinisent chacune un seul segment d'un axone</li>
+            <li data-k="C">sont des cellules gliales</li>
+            <li data-k="D">sont la cible de la sclérose en plaques</li>
+            <li data-k="E">appartiennent au système nerveux périphérique</li>
+          </ol>
+          <div class="corr"><p class="tag">Correction</p><ul class="why">
+            <li class="ko"><b>A — Faux.</b> Dans le SNC, ce sont les oligodendrocytes.</li>
+            <li class="ok"><b>B — Vrai.</b> Elle s'enroule autour d'un seul segment ; il en faut une série le long de l'axone.</li>
+            <li class="ok"><b>C — Vrai.</b> Ce sont des cellules de soutien, de la famille « cellules myélinisantes ».</li>
+            <li class="ko"><b>D — Faux.</b> La sclérose en plaques détruit la myéline du <b>SNC</b>, donc celle des oligodendrocytes.</li>
+            <li class="ok"><b>E — Vrai.</b> Schwann = SNP.</li>
+          </ul></div>
+        </div>
+
+        <div class="qcm" data-answer="A,B,D,E">
+          <p class="q"><span class="qn">3</span><span class="q-body">Pendant la contraction du muscle squelettique :</span><span class="lvl n2">C3</span></p>
+          <ol class="opts">
+            <li data-k="A">le Ca²⁺ est libéré par le réticulum sarcoplasmique</li>
+            <li data-k="B">l'ATP permet le détachement de la tête de myosine</li>
+            <li data-k="C">les filaments d'actine raccourcissent</li>
+            <li data-k="D">en l'absence d'ATP, la myosine reste accrochée à l'actine</li>
+            <li data-k="E">les têtes de myosine tirent l'actine vers le centre du sarcomère</li>
+          </ol>
+          <div class="corr"><p class="tag">Correction</p><ul class="why">
+            <li class="ok"><b>A — Vrai.</b> Étape 5 de la jonction neuromusculaire.</li>
+            <li class="ok"><b>B — Vrai.</b> L'ATP fournit l'énergie du pivot et permet aussi le détachement.</li>
+            <li class="ko"><b>C — Faux.</b> Les filaments glissent ; leur longueur ne change pas. C'est le sarcomère qui raccourcit.</li>
+            <li class="ok"><b>D — Vrai.</b> C'est la rigidité cadavérique.</li>
+            <li class="ok"><b>E — Vrai.</b> C'est le glissement des filaments.</li>
+          </ul></div>
+        </div>
+
+        <div class="qcm" data-answer="B">
+          <p class="q"><span class="qn">4</span><span class="q-body">Lequel de ces mécanismes est un rétrocontrôle positif ?</span><span class="lvl n1">C1</span></p>
+          <ol class="opts">
+            <li data-k="A">le frisson quand il fait froid</li>
+            <li data-k="B">les contractions de l'utérus pendant l'accouchement</li>
+            <li data-k="C">la transpiration quand il fait chaud</li>
+            <li data-k="D">la dilatation des vaisseaux d'un muscle qui manque d'O₂</li>
+          </ol>
+          <div class="corr"><p class="tag">Correction</p><ul class="why">
+            <li class="ko"><b>A — Faux.</b> La chaleur produite s'oppose au froid : négatif.</li>
+            <li class="ok"><b>B — Vrai.</b> L'étirement du col augmente l'ocytocine, qui augmente les contractions, qui étirent encore le col : la réponse amplifie le changement.</li>
+            <li class="ko"><b>C — Faux.</b> La sueur refroidit : elle s'oppose à la chaleur.</li>
+            <li class="ko"><b>D — Faux.</b> Plus de sang = plus d'O₂ : on corrige le manque. C'est un contrôle local (intrinsèque) négatif.</li>
+          </ul></div>
+        </div>
+
+        <div class="qcm" data-answer="A,B,E">
+          <p class="q"><span class="qn">5</span><span class="q-body">Appartiennent au système nerveux central :</span><span class="lvl n1">C2</span></p>
+          <ol class="opts">
+            <li data-k="A">la moelle épinière</li>
+            <li data-k="B">le cervelet</li>
+            <li data-k="C">le nerf vague (X)</li>
+            <li data-k="D">un ganglion spinal</li>
+            <li data-k="E">le bulbe rachidien</li>
+          </ol>
+          <div class="corr"><p class="tag">Correction</p><ul class="why">
+            <li class="ok"><b>A — Vrai.</b> SNC = encéphale + moelle.</li>
+            <li class="ok"><b>B — Vrai.</b> Le cervelet fait partie de l'encéphale.</li>
+            <li class="ko"><b>C — Faux.</b> C'est un nerf crânien : SNP.</li>
+            <li class="ko"><b>D — Faux.</b> Un ganglion est un amas de corps cellulaires <b>hors</b> du SNC.</li>
+            <li class="ok"><b>E — Vrai.</b> Le bulbe est la partie basse du tronc cérébral, donc de l'encéphale.</li>
+          </ul></div>
+        </div>
+
+        <div class="qcm" data-answer="A,B,C">
+          <p class="q"><span class="qn">6</span><span class="q-body">À propos des articulations :</span><span class="lvl n1">C3</span></p>
+          <ol class="opts">
+            <li data-k="A">le genou est une diarthrose</li>
+            <li data-k="B">la symphyse pubienne est une amphiarthrose</li>
+            <li data-k="C">les sutures du crâne sont des synarthroses</li>
+            <li data-k="D">le disque intervertébral forme une articulation synoviale</li>
+            <li data-k="E">plus une articulation est mobile, plus elle est stable</li>
+          </ol>
+          <div class="corr"><p class="tag">Correction</p><ul class="why">
+            <li class="ok"><b>A — Vrai.</b> Articulation synoviale, très mobile.</li>
+            <li class="ok"><b>B — Vrai.</b> Articulation cartilagineuse, peu mobile.</li>
+            <li class="ok"><b>C — Vrai.</b> Articulation fibreuse, quasi immobile.</li>
+            <li class="ko"><b>D — Faux.</b> C'est une articulation cartilagineuse (amphiarthrose), sans cavité ni liquide synovial.</li>
+            <li class="ko"><b>E — Faux.</b> C'est l'inverse : l'épaule, très mobile, est celle qui se luxe le plus.</li>
+          </ul></div>
+        </div>
+
+        <div class="qcm" data-answer="A,C,E">
+          <p class="q"><span class="qn">7</span><span class="q-body">Un AVC détruit l'aire motrice primaire de l'hémisphère gauche. On peut s'attendre à :</span><span class="lvl n3">C2 · C3</span></p>
+          <ol class="opts">
+            <li data-k="A">une paralysie du côté droit du corps</li>
+            <li data-k="B">une paralysie du côté gauche du corps</li>
+            <li data-k="C">une lésion située dans le lobe frontal</li>
+            <li data-k="D">une lésion située en arrière du sillon central</li>
+            <li data-k="E">des difficultés à produire la parole si l'aire de Broca voisine est aussi touchée</li>
+          </ol>
+          <div class="corr"><p class="tag">Correction</p><ul class="why">
+            <li class="ok"><b>A — Vrai.</b> Les voies motrices se croisent au bulbe.</li>
+            <li class="ko"><b>B — Faux.</b> Ce serait vrai pour une lésion à droite.</li>
+            <li class="ok"><b>C — Vrai.</b> L'aire motrice primaire est dans le lobe frontal.</li>
+            <li class="ko"><b>D — Faux.</b> Elle est <b>devant</b> le sillon central ; derrière, c'est l'aire somatosensorielle (pariétal).</li>
+            <li class="ok"><b>E — Vrai.</b> Broca est dans le lobe frontal, en général à gauche : on parle d'aphasie.</li>
+          </ul></div>
+        </div>
+
+        <div class="qcm" data-answer="A,B,D,E">
+          <p class="q"><span class="qn">8</span><span class="q-body">Font partie des 4 grands types de tissus :</span><span class="lvl n1">C1</span></p>
+          <ol class="opts">
+            <li data-k="A">le tissu épithélial</li>
+            <li data-k="B">le tissu conjonctif</li>
+            <li data-k="C">le tissu osseux, comme cinquième type à part</li>
+            <li data-k="D">le tissu musculaire</li>
+            <li data-k="E">le tissu nerveux</li>
+          </ol>
+          <div class="corr"><p class="tag">Correction</p><ul class="why">
+            <li class="ok"><b>A, B, D, E — Vrai.</b> Ce sont les 4 tissus du cours.</li>
+            <li class="ko"><b>C — Faux.</b> L'os n'est pas un 5e type : c'est un tissu conjonctif spécialisé, comme le cartilage et le sang.</li>
+          </ul></div>
+        </div>
+
+        <div class="qcm" data-answer="A,C,E">
+          <p class="q"><span class="qn">9</span><span class="q-body">Le système nerveux sympathique provoque :</span><span class="lvl n2">C2</span></p>
+          <ol class="opts">
+            <li data-k="A">une mydriase</li>
+            <li data-k="B">une bradycardie</li>
+            <li data-k="C">une dilatation des bronches</li>
+            <li data-k="D">une stimulation de la digestion</li>
+            <li data-k="E">une libération de noradrénaline au niveau des organes</li>
+          </ol>
+          <div class="corr"><p class="tag">Correction</p><ul class="why">
+            <li class="ok"><b>A — Vrai.</b> Pupille dilatée pour mieux voir le danger.</li>
+            <li class="ko"><b>B — Faux.</b> Il accélère le cœur (tachycardie) ; la bradycardie est parasympathique.</li>
+            <li class="ok"><b>C — Vrai.</b> Plus d'air pour l'effort.</li>
+            <li class="ko"><b>D — Faux.</b> Il ralentit la digestion : ce n'est pas le moment de digérer.</li>
+            <li class="ok"><b>E — Vrai.</b> Sympathique = noradrénaline ; parasympathique = acétylcholine.</li>
+          </ul></div>
+        </div>
+
+        <div class="qcm" data-answer="A,C,D">
+          <p class="q"><span class="qn">10</span><span class="q-body">L'ostéoporose :</span><span class="lvl n2">C3</span></p>
+          <ol class="opts">
+            <li data-k="A">correspond à une résorption supérieure à la formation osseuse</li>
+            <li data-k="B">est une usure du cartilage articulaire</li>
+            <li data-k="C">s'accélère après la ménopause</li>
+            <li data-k="D">reste souvent silencieuse jusqu'à une fracture</li>
+            <li data-k="E">est causée par un excès d'œstrogènes</li>
+          </ol>
+          <div class="corr"><p class="tag">Correction</p><ul class="why">
+            <li class="ok"><b>A — Vrai.</b> Les ostéoclastes cassent plus que les ostéoblastes ne bâtissent.</li>
+            <li class="ko"><b>B — Faux.</b> C'est l'arthrose.</li>
+            <li class="ok"><b>C — Vrai.</b> Les œstrogènes freinaient la résorption ; ils chutent à la ménopause.</li>
+            <li class="ok"><b>D — Vrai.</b> Souvent découverte par une fracture du col du fémur ou d'une vertèbre.</li>
+            <li class="ko"><b>E — Faux.</b> C'est le <b>manque</b> d'œstrogènes qui accélère la perte osseuse.</li>
+          </ul></div>
+        </div>
+
+        <div class="qcm" data-answer="A,B,D">
+          <p class="q"><span class="qn">11</span><span class="q-body">Le squelette participe à l'homéostasie car :</span><span class="lvl n2">C1 · C3</span></p>
+          <ol class="opts">
+            <li data-k="A">il contient environ 99 % du calcium de l'organisme</li>
+            <li data-k="B">sa moelle rouge produit les cellules sanguines</li>
+            <li data-k="C">il sécrète l'ocytocine</li>
+            <li data-k="D">il libère du Ca²⁺ dans le sang sous l'effet de la parathormone</li>
+            <li data-k="E">il ne se renouvelle jamais à l'âge adulte</li>
+          </ol>
+          <div class="corr"><p class="tag">Correction</p><ul class="why">
+            <li class="ok"><b>A — Vrai.</b> C'est un réservoir (cours 1, diapo 37 ; cours 3, diapo 7).</li>
+            <li class="ok"><b>B — Vrai.</b> C'est l'hématopoïèse.</li>
+            <li class="ko"><b>C — Faux.</b> L'ocytocine est une hormone, sans rapport avec l'os.</li>
+            <li class="ok"><b>D — Vrai.</b> La PTH augmente la calcémie en mobilisant le calcium osseux.</li>
+            <li class="ko"><b>E — Faux.</b> L'os se remodèle en permanence, toute la vie.</li>
+          </ul></div>
+        </div>
+
+        <div class="qcm" data-answer="A,B,D">
+          <p class="q"><span class="qn">12</span><span class="q-body">À propos de l'arc réflexe :</span><span class="lvl n1">C2</span></p>
+          <ol class="opts">
+            <li data-k="A">il comporte 5 éléments</li>
+            <li data-k="B">le centre d'intégration du réflexe rotulien est la moelle épinière</li>
+            <li data-k="C">il passe obligatoirement par le cortex cérébral</li>
+            <li data-k="D">la réponse est involontaire</li>
+            <li data-k="E">l'effecteur est le récepteur sensoriel</li>
+          </ol>
+          <div class="corr"><p class="tag">Correction</p><ul class="why">
+            <li class="ok"><b>A — Vrai.</b> Récepteur, neurone sensitif, centre d'intégration, neurone moteur, effecteur.</li>
+            <li class="ok"><b>B — Vrai.</b> C'est pour ça qu'il est si rapide.</li>
+            <li class="ko"><b>C — Faux.</b> Il ne nécessite pas le cerveau.</li>
+            <li class="ok"><b>D — Vrai.</b> Il est automatique.</li>
+            <li class="ko"><b>E — Faux.</b> L'effecteur est le muscle (ou une glande), au bout de la chaîne.</li>
+          </ul></div>
+        </div>
+
+        <div class="qcm" data-answer="A,B,C,D">
+          <p class="q"><span class="qn">13</span><span class="q-body">L'unité motrice :</span><span class="lvl n2">C3</span></p>
+          <ol class="opts">
+            <li data-k="A">regroupe un motoneurone et toutes les fibres qu'il innerve</li>
+            <li data-k="B">est petite dans les muscles des doigts</li>
+            <li data-k="C">permet de graduer la force par le recrutement</li>
+            <li data-k="D">permet de graduer la force par la fréquence des influx</li>
+            <li data-k="E">est grande dans les muscles de l'œil</li>
+          </ol>
+          <div class="corr"><p class="tag">Correction</p><ul class="why">
+            <li class="ok"><b>A — Vrai.</b> C'est la définition ; toutes ses fibres se contractent ensemble.</li>
+            <li class="ok"><b>B — Vrai.</b> Peu de fibres par motoneurone = gestes précis.</li>
+            <li class="ok"><b>C — Vrai.</b> Plus d'unités recrutées = plus de force.</li>
+            <li class="ok"><b>D — Vrai.</b> Des influx plus rapprochés = contraction plus forte.</li>
+            <li class="ko"><b>E — Faux.</b> L'œil a de très petites unités motrices : c'est ce qui le rend précis.</li>
+          </ul></div>
+        </div>
+
+        <div class="qcm" data-answer="A,B,D">
+          <p class="q"><span class="qn">14</span><span class="q-body">Le contrôle intrinsèque :</span><span class="lvl n2">C1</span></p>
+          <ol class="opts">
+            <li data-k="A">est un contrôle local</li>
+            <li data-k="B">se fait à l'intérieur de l'organe concerné</li>
+            <li data-k="C">est assuré par le système nerveux et le système endocrine</li>
+            <li data-k="D">explique la dilatation des vaisseaux d'un muscle qui consomme plus d'O₂</li>
+            <li data-k="E">coordonne plusieurs organes pour un objectif commun</li>
+          </ol>
+          <div class="corr"><p class="tag">Correction</p><ul class="why">
+            <li class="ok"><b>A — Vrai.</b> Intrinsèque = « en dedans ».</li>
+            <li class="ok"><b>B — Vrai.</b> L'organe se règle lui-même.</li>
+            <li class="ko"><b>C — Faux.</b> Ça, c'est le contrôle extrinsèque (global).</li>
+            <li class="ok"><b>D — Vrai.</b> C'est l'exemple du cours (diapo 46).</li>
+            <li class="ko"><b>E — Faux.</b> Coordonner plusieurs organes est le rôle du contrôle extrinsèque.</li>
+          </ul></div>
+        </div>
+
+        <div class="qcm" data-answer="A,B,C,D">
+          <p class="q"><span class="qn">15</span><span class="q-body">Méninges et liquide céphalo-rachidien (LCR) :</span><span class="lvl n2">C2</span></p>
+          <ol class="opts">
+            <li data-k="A">le LCR circule entre l'arachnoïde et la pie-mère</li>
+            <li data-k="B">la dure-mère est la méninge la plus externe</li>
+            <li data-k="C">la pie-mère est collée au tissu nerveux</li>
+            <li data-k="D">le LCR est produit dans les ventricules</li>
+            <li data-k="E">le LCR circule entre l'os et la dure-mère</li>
+          </ol>
+          <div class="corr"><p class="tag">Correction</p><ul class="why">
+            <li class="ok"><b>A — Vrai.</b> C'est l'espace sous-arachnoïdien.</li>
+            <li class="ok"><b>B — Vrai.</b> Ordre de dehors en dedans : dure-mère, arachnoïde, pie-mère.</li>
+            <li class="ok"><b>C — Vrai.</b> Très fine, elle épouse le cerveau.</li>
+            <li class="ok"><b>D — Vrai.</b> Les ventricules sont les cavités du cerveau.</li>
+            <li class="ko"><b>E — Faux.</b> Pas de LCR à cet endroit.</li>
+          </ul></div>
+        </div>
+
+        <div class="qcm" data-answer="A,B,D,E">
+          <p class="q"><span class="qn">16</span><span class="q-body">Ligaments et tendons :</span><span class="lvl n1">C3</span></p>
+          <ol class="opts">
+            <li data-k="A">un ligament relie deux os</li>
+            <li data-k="B">un tendon relie un muscle à un os</li>
+            <li data-k="C">les ligaments sont très vascularisés et cicatrisent vite</li>
+            <li data-k="D">une entorse est une lésion de ligament</li>
+            <li data-k="E">une tendinite est une inflammation de tendon</li>
+          </ol>
+          <div class="corr"><p class="tag">Correction</p><ul class="why">
+            <li class="ok"><b>A — Vrai.</b> Il stabilise l'articulation.</li>
+            <li class="ok"><b>B — Vrai.</b> Il transmet la traction du muscle à l'os.</li>
+            <li class="ko"><b>C — Faux.</b> Peu vascularisés, ils cicatrisent lentement.</li>
+            <li class="ok"><b>D — Vrai.</b> Ligament étiré ou rompu.</li>
+            <li class="ok"><b>E — Vrai.</b> Le suffixe « -ite » veut dire inflammation.</li>
+          </ul></div>
+        </div>
+
+        <div class="qcm" data-answer="A,B,C,D">
+          <p class="q"><span class="qn">17</span><span class="q-body">À la jonction neuromusculaire :</span><span class="lvl n2">C2 · C3</span></p>
+          <ol class="opts">
+            <li data-k="A">le motoneurone libère de l'acétylcholine</li>
+            <li data-k="B">l'acétylcholine se fixe sur des récepteurs nicotiniques</li>
+            <li data-k="C">le curare bloque ces récepteurs</li>
+            <li data-k="D">la toxine botulique empêche la libération d'acétylcholine</li>
+            <li data-k="E">l'acétylcholinestérase libère le Ca²⁺ dans la fibre</li>
+          </ol>
+          <div class="corr"><p class="tag">Correction</p><ul class="why">
+            <li class="ok"><b>A — Vrai.</b> Étape 2.</li>
+            <li class="ok"><b>B — Vrai.</b> Étape 3, qui déclenche le potentiel d'action musculaire.</li>
+            <li class="ok"><b>C — Vrai.</b> Comme les anticorps de la myasthénie.</li>
+            <li class="ok"><b>D — Vrai.</b> Le message n'est pas envoyé : paralysie.</li>
+            <li class="ko"><b>E — Faux.</b> L'acétylcholinestérase <b>dégrade</b> l'acétylcholine, ce qui arrête la contraction. Le Ca²⁺ vient du réticulum sarcoplasmique.</li>
+          </ul></div>
+        </div>
+
+        <div class="qcm" data-answer="A,B,C,D">
+          <p class="q"><span class="qn">18</span><span class="q-body">Système nerveux et système endocrine :</span><span class="lvl n1">C1 · C2</span></p>
+          <ol class="opts">
+            <li data-k="A">le système nerveux transmet des messages électriques rapides</li>
+            <li data-k="B">le système endocrine utilise des hormones transportées par le sang</li>
+            <li data-k="C">le système endocrine agit sur les reins pour régler le volume et les électrolytes</li>
+            <li data-k="D">le système nerveux assure aussi des fonctions sans lien direct avec l'homéostasie, comme la mémoire</li>
+            <li data-k="E">le système endocrine règle surtout les réponses très rapides</li>
+          </ol>
+          <div class="corr"><p class="tag">Correction</p><ul class="why">
+            <li class="ok"><b>A — Vrai.</b> C'est le contrôle rapide.</li>
+            <li class="ok"><b>B — Vrai.</b> D'où sa lenteur relative.</li>
+            <li class="ok"><b>C — Vrai.</b> Cours 1, diapo 42.</li>
+            <li class="ok"><b>D — Vrai.</b> Conscience, mémoire, créativité (cours 1, diapo 41).</li>
+            <li class="ko"><b>E — Faux.</b> Il règle plutôt ce qui dure : croissance, nutriments, volume.</li>
+          </ul></div>
+        </div>
+
+        <div class="qcm" data-answer="A,B,C,D">
+          <p class="q"><span class="qn">19</span><span class="q-body">Les fibres musculaires :</span><span class="lvl n3">C3</span></p>
+          <ol class="opts">
+            <li data-k="A">de type I résistent bien à la fatigue</li>
+            <li data-k="B">de type IIx sont blanches et se fatiguent vite</li>
+            <li data-k="C">de type IIa sont rouges</li>
+            <li data-k="D">des muscles de la posture sont surtout de type I</li>
+            <li data-k="E">d'un même muscle humain sont toutes du même type</li>
+          </ol>
+          <div class="corr"><p class="tag">Correction</p><ul class="why">
+            <li class="ok"><b>A — Vrai.</b> Aérobies, riches en mitochondries.</li>
+            <li class="ok"><b>B — Vrai.</b> Glycolytiques, peu de myoglobine.</li>
+            <li class="ok"><b>C — Vrai.</b> Piège : la diapo 26 dit « type II = blanches », mais la diapo 27 montre que les IIa ont beaucoup de myoglobine.</li>
+            <li class="ok"><b>D — Vrai.</b> Contraction tonique permanente, sans fatigue.</li>
+            <li class="ko"><b>E — Faux.</b> Tous les muscles humains sont mixtes.</li>
+          </ul></div>
+        </div>
+
+        <div class="qcm" data-answer="A,B,C,E">
+          <p class="q"><span class="qn">20</span><span class="q-body">Les nerfs rachidiens :</span><span class="lvl n2">C2</span></p>
+          <ol class="opts">
+            <li data-k="A">sont au nombre de 31 paires</li>
+            <li data-k="B">sont tous mixtes</li>
+            <li data-k="C">comptent 8 paires cervicales</li>
+            <li data-k="D">sortent du tronc cérébral</li>
+            <li data-k="E">comptent 12 paires thoraciques</li>
+          </ol>
+          <div class="corr"><p class="tag">Correction</p><ul class="why">
+            <li class="ok"><b>A — Vrai.</b> 8 + 12 + 5 + 5 + 1 = 31.</li>
+            <li class="ok"><b>B — Vrai.</b> Sensitifs et moteurs à la fois.</li>
+            <li class="ok"><b>C — Vrai.</b> Alors qu'il n'y a que 7 vertèbres cervicales.</li>
+            <li class="ko"><b>D — Faux.</b> Ils sortent de la moelle, entre les vertèbres. Ce sont les nerfs crâniens qui sortent surtout du tronc cérébral.</li>
+            <li class="ok"><b>E — Vrai.</b> Autant que de vertèbres thoraciques.</li>
+          </ul></div>
+        </div>
+
+        <div class="qcm" data-answer="A,B,D">
+          <p class="q"><span class="qn">21</span><span class="q-body">Lors du frisson :</span><span class="lvl n3">C1 · C2 · C3</span></p>
+          <ol class="opts">
+            <li data-k="A">l'effecteur est le muscle squelettique</li>
+            <li data-k="B">l'essentiel de l'énergie de contraction est libéré en chaleur</li>
+            <li data-k="C">il s'agit d'un rétrocontrôle positif</li>
+            <li data-k="D">le centre de contrôle est situé dans le cerveau</li>
+            <li data-k="E">les contractions sont volontaires</li>
+          </ol>
+          <div class="corr"><p class="tag">Correction</p><ul class="why">
+            <li class="ok"><b>A — Vrai.</b> Voir <a href="#frisson">le fil rouge</a>.</li>
+            <li class="ok"><b>B — Vrai.</b> Environ ¾ (cours 3, diapo 26).</li>
+            <li class="ko"><b>C — Faux.</b> La chaleur s'oppose au froid : rétrocontrôle négatif.</li>
+            <li class="ok"><b>D — Vrai.</b> La région du cerveau responsable de la thermorégulation (cours 1, diapo 10).</li>
+            <li class="ko"><b>E — Faux.</b> Ce sont des muscles volontaires, mais le frisson est involontaire.</li>
+          </ul></div>
+        </div>
+
+        <div class="qcm" data-answer="A,B,C,D">
+          <p class="q"><span class="qn">22</span><span class="q-body">La colonne vertébrale :</span><span class="lvl n1">C3</span></p>
+          <ol class="opts">
+            <li data-k="A">compte 33 vertèbres</li>
+            <li data-k="B">compte 7 vertèbres cervicales</li>
+            <li data-k="C">compte 5 vertèbres lombaires</li>
+            <li data-k="D">comprend le sacrum, fait de 5 vertèbres soudées</li>
+            <li data-k="E">fait partie du squelette appendiculaire</li>
+          </ol>
+          <div class="corr"><p class="tag">Correction</p><ul class="why">
+            <li class="ok"><b>A à D — Vrai.</b> 7 cervicales + 12 thoraciques + 5 lombaires + 5 sacrées + 4 coccygiennes = 33.</li>
+            <li class="ko"><b>E — Faux.</b> Elle forme l'axe : squelette axial.</li>
+          </ul></div>
+        </div>
+
+        <div class="qcm" data-answer="A,B,D">
+          <p class="q"><span class="qn">23</span><span class="q-body">Le cervelet :</span><span class="lvl n2">C2 · C3</span></p>
+          <ol class="opts">
+            <li data-k="A">participe à l'équilibre</li>
+            <li data-k="B">coordonne et corrige les mouvements</li>
+            <li data-k="C">contient les centres de la respiration</li>
+            <li data-k="D">lésé, il donne une ataxie</li>
+            <li data-k="E">lésé, il donne un tremblement de repos</li>
+          </ol>
+          <div class="corr"><p class="tag">Correction</p><ul class="why">
+            <li class="ok"><b>A — Vrai.</b> Équilibre et posture.</li>
+            <li class="ok"><b>B — Vrai.</b> Il compare le geste prévu et le geste réalisé.</li>
+            <li class="ko"><b>C — Faux.</b> Ils sont dans le bulbe rachidien.</li>
+            <li class="ok"><b>D — Vrai.</b> Mouvements mal coordonnés.</li>
+            <li class="ko"><b>E — Faux.</b> Le cervelet donne un tremblement <b>pendant</b> le mouvement ; le tremblement de repos évoque Parkinson.</li>
+          </ul></div>
+        </div>
+
+        <div class="qcm" data-answer="A,B,C,E">
+          <p class="q"><span class="qn">24</span><span class="q-body">Niveaux d'organisation :</span><span class="lvl n1">C1</span></p>
+          <ol class="opts">
+            <li data-k="A">un organe est formé de plusieurs tissus</li>
+            <li data-k="B">un tissu regroupe des cellules de même spécialisation</li>
+            <li data-k="C">un système est un ensemble d'organes qui coopèrent</li>
+            <li data-k="D">l'estomac est un tissu</li>
+            <li data-k="E">le sang est un tissu conjonctif</li>
+          </ol>
+          <div class="corr"><p class="tag">Correction</p><ul class="why">
+            <li class="ok"><b>A — Vrai.</b> L'estomac contient les 4 tissus.</li>
+            <li class="ok"><b>B — Vrai.</b> Définition du cours.</li>
+            <li class="ok"><b>C — Vrai.</b> Ex. : le système digestif.</li>
+            <li class="ko"><b>D — Faux.</b> L'estomac est un organe.</li>
+            <li class="ok"><b>E — Vrai.</b> Tissu conjonctif spécialisé.</li>
+          </ul></div>
+        </div>
+      </div>
+
+      <div class="serie" id="serie-reflexion">
+        <header><h3>Partie B · Questions de réflexion</h3></header>
+        <p class="consigne">Réponds par écrit en 5 à 10 lignes, puis compare avec la proposition de corrigé.</p>
+
+        <div class="qc">
+          <p class="q"><span class="qn">B1</span><span class="q-body">Explique le frisson en montrant ce que chacun des trois cours apporte.</span><span class="lvl n2">N2</span></p>
+          <details><summary>Voir la solution</summary><div class="sol">
+            <p><b>Cours 1 :</b> c'est un rétrocontrôle négatif. Variable : la température du corps ; détecteur : thermorécepteurs ; centre : thermorégulation dans le cerveau ; effecteur : muscles squelettiques. La réponse s'oppose au changement.</p>
+            <p><b>Cours 2 :</b> le SN détecte (récepteurs, neurone afférent), intègre (centre), répond (voie motrice efférente, motoneurones). C'est involontaire.</p>
+            <p><b>Cours 3 :</b> à la JNM, l'ACh déclenche la libération de Ca²⁺ ; actine et myosine glissent grâce à l'ATP ; environ ¾ de l'énergie part en chaleur. La température remonte et la boucle s'arrête.</p>
+          </div></details>
+        </div>
+
+        <div class="qc">
+          <p class="q"><span class="qn">B2</span><span class="q-body">Une femme de 68 ans, ménopausée et sédentaire, se casse le col du fémur après une chute banale. Explique le mécanisme et cite deux moyens de prévention.</span><span class="lvl n3">N3</span></p>
+          <details><summary>Voir la solution</summary><div class="sol">
+            <p>Il s'agit probablement d'une <b>ostéoporose</b>. Après la ménopause, les œstrogènes chutent : ils ne freinent plus la résorption par les ostéoclastes. La sédentarité supprime les contraintes mécaniques qui stimulent la formation par les ostéoblastes. Résorption &gt; formation : l'os spongieux s'amincit et casse au moindre choc. La maladie est silencieuse jusqu'à la fracture.</p>
+            <p><b>Prévention :</b> activité physique (contraintes mécaniques), apports en calcium et en vitamine D (absorption intestinale du calcium). Un traitement médical est possible, mais c'est hors du cours.</p>
+          </div></details>
+        </div>
+
+        <div class="qc">
+          <p class="q"><span class="qn">B3</span><span class="q-body">Pendant une anesthésie, on injecte un curare. Pourquoi faut-il alors faire respirer le patient avec une machine ?</span><span class="lvl n3">N3</span></p>
+          <details><summary>Voir la solution</summary><div class="sol">
+            <p>Le curare bloque les récepteurs nicotiniques de la jonction neuromusculaire. L'acétylcholine ne peut plus déclencher de potentiel d'action dans les fibres : tous les muscles squelettiques sont paralysés.</p>
+            <p>Or le diaphragme est un muscle squelettique (cours 3, diapo 33). Le bulbe rachidien continue d'envoyer l'ordre de respirer (cours 2), mais le muscle ne répond plus. Il faut donc ventiler le patient tant que le curare agit.</p>
+          </div></details>
+        </div>
+
+        <div class="qc">
+          <p class="q"><span class="qn">B4</span><span class="q-body">Pourquoi une lésion de la moelle dans le cou peut-elle paralyser les quatre membres, alors qu'une lésion lombaire ne paralyse que les jambes ?</span><span class="lvl n3">N3</span></p>
+          <details><summary>Voir la solution</summary><div class="sol">
+            <p>La moelle est la voie de passage entre le cerveau et le corps. Une lésion bloque les messages <b>sous</b> le niveau atteint (cours 2, diapo 23).</p>
+            <p>Au niveau du cou, tout ce qui est en dessous est coupé du cerveau : bras, tronc et jambes. Au niveau lombaire, les bras sont commandés par des nerfs qui sortent plus haut (nerfs cervicaux) : seules les jambes sont touchées.</p>
+            <p class="muted">Complément hors diapo : une lésion très haute (au-dessus de C3–C5) peut aussi toucher la commande du diaphragme et donc la respiration.</p>
+          </div></details>
+        </div>
+
+        <div class="qc">
+          <p class="q"><span class="qn">B5</span><span class="q-body">Compare l'organisation en enveloppes d'un nerf et d'un muscle squelettique.</span><span class="lvl n2">N2</span></p>
+          <details><summary>Voir la solution</summary><div class="sol">
+            <p>Même logique de poupées russes :</p>
+            <ul>
+              <li><b>Autour d'un élément :</b> endonèvre autour d'un axone ; endomysium autour d'une fibre musculaire.</li>
+              <li><b>Autour d'un faisceau :</b> périnèvre ; périmysium.</li>
+              <li><b>Autour de l'organe entier :</b> épinèvre ; épimysium.</li>
+            </ul>
+            <p>Les préfixes guident : endo = dedans, péri = autour, épi = sur. Dans le muscle, ces enveloppes se prolongent en tendon jusqu'à l'os.</p>
+          </div></details>
+        </div>
+
+        <div class="qc">
+          <p class="q"><span class="qn">B6</span><span class="q-body">Le médecin tape sous la rotule et la jambe se lève. Décris l'arc réflexe, puis explique à quoi sert ce réflexe dans la vie courante.</span><span class="lvl n3">N3</span></p>
+          <details><summary>Voir la solution</summary><div class="sol">
+            <p>Le coup étire le tendon et donc le muscle de la cuisse (quadriceps). <b>1</b> Les récepteurs d'étirement du muscle détectent ; <b>2</b> le neurone sensitif amène le message à la moelle ; <b>3</b> la moelle intègre ; <b>4</b> le motoneurone repart vers le muscle ; <b>5</b> le quadriceps se contracte et la jambe se lève. Le cerveau n'intervient pas.</p>
+            <p>C'est le <b>réflexe myotatique</b> : un muscle étiré se contracte. Dans la vie courante, il corrige en permanence les déséquilibres et maintient la posture (cours 3, diapo 32). Le médecin le teste pour vérifier que toute la boucle (nerf, moelle, muscle) fonctionne.</p>
+          </div></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== L'ESSENTIEL ===================== -->
+    <section class="chap" id="essentiel">
+      <header>
+        <p class="eyebrow">L'essentiel des 3 cours</p>
+        <h2>Si tu ne devais retenir que ça</h2>
+      </header>
+      <ol class="recap">
+        <li><span>La <b>physiologie</b> étudie le fonctionnement du corps ; structure et fonction sont inséparables.</span></li>
+        <li><span>Six <b>niveaux d'organisation</b> : chimique, cellulaire, tissulaire, organe, système, organisme. Quatre <b>tissus</b>, onze <b>systèmes</b>.</span></li>
+        <li><span>Le <b>milieu intérieur</b> est le liquide extracellulaire. L'<b>homéostasie</b> le maintient dans d'étroites limites : un équilibre dynamique.</span></li>
+        <li><span>Le <b>rétrocontrôle négatif</b> corrige et stabilise ; le <b>positif</b> amplifie et reste rare.</span></li>
+        <li><span>Le <b>système nerveux</b> détecte, intègre, répond, par des messages électriques rapides ; le système endocrine agit plus lentement par les hormones.</span></li>
+        <li><span><b>SNC</b> = encéphale (cerveau, cervelet, tronc cérébral) + moelle. <b>SNP</b> = 12 paires de nerfs crâniens, 31 paires rachidiennes, ganglions.</span></li>
+        <li><span><b>Neurone</b> : dendrites → corps cellulaire → axone → terminaisons. La <b>glie</b> nourrit, protège, myélinise et défend.</span></li>
+        <li><span>Le SNC est protégé par les os, les <b>méninges</b> (dure-mère, arachnoïde, pie-mère), le LCR et la BHE.</span></li>
+        <li><span><b>Somatique</b> = volontaire ; <b>autonome</b> = involontaire, avec un sympathique (fuite ou combat) et un parasympathique (repos et digestion) opposés.</span></li>
+        <li><span>Le mouvement est une chaîne : <b>SN → muscle → tendon → os → articulation</b>.</span></li>
+        <li><span>L'os est vivant : <b>ostéoblastes</b> bâtissent, <b>ostéoclastes</b> cassent, sous le contrôle des hormones et des contraintes.</span></li>
+        <li><span><b>Contraction</b> : ACh à la JNM → Ca²⁺ → glissement actine/myosine grâce à l'ATP.</span></li>
+        <li><span><b>Unité motrice</b> = 1 motoneurone + ses fibres ; la force se règle par le recrutement et la fréquence.</span></li>
+        <li><span>La <b>posture</b> est réglée sans y penser à partir de la proprioception, du vestibule et de la vision.</span></li>
+      </ol>
+    </section>
+
+    <nav class="pager" aria-label="Pages voisines">
+      <a href="cours3.html">← Cours 3 · Locomotion</a>
+      <a href="index.html">Accueil →</a>
+    </nav>
+    <footer class="foot">
+      <span>Fiches de révision personnelles · L1 Sciences pour la Santé · Université de La Réunion</span>
+      <span>D'après les diapos du cours (diffusion interdite) · compléments signalés « hors diapo »</span>
+    </footer>
+  </main>
+</div>
+
+<script src="quiz.js"></script>
+</body>
+</html>
