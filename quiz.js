@@ -295,7 +295,50 @@
     });
   }
 
+  /* ---------------- Programme 7 jours (accueil) ---------------- */
+  var PROG_KEY = "ra1-programme";
+  function setupProgramme() {
+    var boxes = $all(".prog input[type='checkbox']");
+    if (!boxes.length) return;
+    var state = {};
+    try { state = JSON.parse(window.localStorage.getItem(PROG_KEY) || "{}") || {}; } catch (e) { state = {}; }
+    boxes.forEach(function (b) { b.checked = !!state[b.id]; });
+    var doneEl = $("#prog-done"), totalEl = $("#prog-total"), fill = $(".prog-bar__fill");
+    function refresh() {
+      var done = boxes.filter(function (b) { return b.checked; }).length;
+      if (doneEl) doneEl.textContent = done;
+      if (totalEl) totalEl.textContent = boxes.length;
+      if (fill) fill.style.width = Math.round(100 * done / boxes.length) + "%";
+      $all(".prog > li.day").forEach(function (day) {
+        var own = $all("input[type='checkbox']", day);
+        var n = own.filter(function (b) { return b.checked; }).length;
+        var c = $(".day__count", day);
+        if (c) c.textContent = n + " / " + own.length;
+        day.classList.toggle("is-done", n === own.length);
+      });
+    }
+    function save() {
+      state = {};
+      boxes.forEach(function (b) { if (b.checked) state[b.id] = true; });
+      try { window.localStorage.setItem(PROG_KEY, JSON.stringify(state)); } catch (e) { /* stockage indisponible */ }
+    }
+    boxes.forEach(function (b) { b.addEventListener("change", function () { save(); refresh(); }); });
+    var reset = $("#prog-reset"), armed = null;
+    if (reset) reset.addEventListener("click", function () {
+      if (!armed) {
+        reset.textContent = "Clique encore pour tout décocher";
+        armed = setTimeout(function () { armed = null; reset.textContent = "Tout décocher"; }, 4000);
+        return;
+      }
+      clearTimeout(armed); armed = null; reset.textContent = "Tout décocher";
+      boxes.forEach(function (b) { b.checked = false; });
+      save(); refresh();
+    });
+    refresh();
+  }
+
   function init() {
+    try { setupProgramme(); } catch (e) { console.error(e); }
     try { setupModes(); } catch (e) { console.error(e); }
     $all("dl.lexique").forEach(function (d) { try { setupLexique(d); } catch (e) { console.error(e); } });
     var page = (location.pathname.split("/").pop() || "index.html");

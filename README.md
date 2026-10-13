@@ -30,4 +30,16 @@ En tout : 64 schémas, 313 mots au lexique, 114 QCM, 32 Vrai/Faux et 47 question
 3. Refais les questions ratées 1, 3 puis 7 jours plus tard.
 4. Termine par l'examen blanc, qui mélange les trois cours.
 
+## Programme 7 jours
+
+Environ 2 h à 2 h 30 par jour. La page d'accueil du site contient ce programme avec des cases à cocher et un lien vers chaque tâche.
+
+- J1 : cours 1 en entier, exercices des diapos, niveau 1
+- J2 : cours 2, parties 1 et 2 ; niveau 2 du cours 1 sans relire
+- J3 : cours 2, partie 3, exercices des diapos, niveau 1 ; niveau 3 du cours 1
+- J4 : cours 3 en entier, exercices des diapos, niveau 1 ; niveau 2 du cours 2
+- J5 : niveaux 2 et 3 du cours 3, niveau 3 du cours 2, lexiques 1 et 2 en flashcards
+- J6 : synthèse (frisson, liens, pièges, mnémos), premier examen blanc, questions Moodle
+- J7 : « Revoir seulement mes erreurs », lexique 3, vue essentielle, deuxième examen blanc (objectif 18/24), « L'essentiel », se coucher tôt
+
 Les ajouts qui ne sont pas sur les diapos sont toujours signalés « Complément hors diapo ». Les diapos originales des enseignants ne sont pas incluses : elles sont à diffusion interdite.

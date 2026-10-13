@@ -57,6 +57,30 @@
   .finding .where { font-family: var(--f-mono); font-size: var(--fs-xs); color: var(--ink-3); letter-spacing: .04em; padding-top: .2rem; }
   .finding p + p { margin-top: .3rem; }
   @media (max-width: 520px) { .finding { grid-template-columns: minmax(0, 1fr); gap: .2rem; } }
+  /* Programme 7 jours */
+  .prog { list-style: none; padding: 0; margin: 0; display: grid; gap: .7rem; }
+  .prog > li.day { margin: 0; display: grid; grid-template-columns: 5.5rem minmax(0, 1fr); gap: 1rem; background: var(--surface); border: 1px solid var(--rule); border-radius: var(--radius); padding: .9rem 1rem; }
+  .prog > li.day.is-done { border-color: var(--good); background: var(--good-bg); }
+  .day__head { display: grid; align-content: start; gap: .25rem; }
+  .day__n { font-family: var(--f-display); font-weight: 800; font-size: 1.7rem; line-height: 1; color: var(--eosine); }
+  .day.is-done .day__n { color: var(--good); }
+  .day__t, .day__count { font-family: var(--f-mono); font-size: var(--fs-xs); color: var(--ink-3); letter-spacing: .03em; }
+  .day__body { min-width: 0; }
+  .day__body h3 { font-size: 1.05rem; margin-bottom: .45rem; }
+  .tasks { list-style: none; padding: 0; margin: 0; display: grid; gap: .4rem; }
+  .tasks li { margin: 0; display: grid; grid-template-columns: 1.3rem minmax(0, 1fr); gap: .55rem; align-items: start; font-size: var(--fs-sm); }
+  .tasks input { width: 1.1rem; height: 1.1rem; margin: .18rem 0 0; accent-color: var(--good); cursor: pointer; }
+  .tasks label { cursor: pointer; }
+  .tasks input:checked + label { color: var(--ink-3); text-decoration: line-through; text-decoration-color: var(--ink-3); }
+  .prog-status { display: flex; flex-wrap: wrap; gap: .5rem 1rem; align-items: center; font-size: var(--fs-sm); color: var(--ink-2); }
+  .prog-bar { flex: 1 1 12rem; max-width: 22rem; height: .55rem; background: var(--surface-2); border: 1px solid var(--rule); border-radius: 999px; overflow: hidden; }
+  .prog-bar__fill { height: 100%; width: 0; background: var(--good); }
+  .linkbtn { font: inherit; background: none; border: 0; padding: 0; color: var(--hema); text-decoration: underline; cursor: pointer; }
+  .prog-rules { max-width: none; }
+  @media (max-width: 520px) {
+    .prog > li.day { grid-template-columns: minmax(0, 1fr); gap: .5rem; }
+    .day__head { grid-auto-flow: column; justify-content: start; align-items: baseline; gap: .7rem; }
+  }
 </style>
 </head>
 <body>
@@ -81,9 +105,121 @@
     <div class="lame" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
     <p class="lead">Tes trois cours repris notion par notion : explications simples, définitions avec l'origine des mots, exemples du quotidien, schémas, pièges, moyens mnémotechniques. Puis des exercices corrigés pour t'entraîner avant le CC et le CCF.</p>
     <div class="start">
-      <a class="btn primary" href="cours1.html">Commencer par le cours 1</a>
+      <a class="btn primary" href="#programme">Programme 7 jours</a>
+      <a class="btn" href="cours1.html">Commencer par le cours 1</a>
       <a class="btn" href="#entrainer">Voir tous les exercices</a>
       <a class="btn" href="#imprimer">Télécharger les PDF</a>
+    </div>
+  </section>
+
+  <!-- ===================== PROGRAMME 7 JOURS (généré par _tools/make_programme.py) ===================== -->
+  <section aria-labelledby="h-programme" id="programme">
+    <div class="sec-head">
+      <p class="eyebrow">Programme 7 jours</p>
+      <h2 id="h-programme">Le contrôle dans une semaine : le programme</h2>
+    </div>
+    <p class="muted" style="max-width: var(--measure)">Environ 2 h à 2 h 30 par jour. Chaque tâche mène directement à la bonne page. Coche-la quand elle est faite : tes cases restent enregistrées dans ce navigateur.</p>
+    <div class="prog-status">
+      <div class="prog-bar" aria-hidden="true"><div class="prog-bar__fill"></div></div>
+      <span><b id="prog-done">0</b> tâche(s) faite(s) sur <b id="prog-total">23</b></span>
+      <button type="button" class="linkbtn" id="prog-reset">Tout décocher</button>
+    </div>
+    <ol class="prog">
+      <li class="day" id="j1">
+        <div class="day__head"><span class="day__n">J1</span><span class="day__t">2 h</span><span class="day__count">0 / 3</span></div>
+        <div class="day__body">
+          <h3>Cours 1 · Homéostasie</h3>
+          <ul class="tasks">
+            <li><input type="checkbox" id="p-j1-1"><label for="p-j1-1">Lire le <a href="cours1.html">cours 1</a> en entier, schémas compris</label></li>
+            <li><input type="checkbox" id="p-j1-2"><label for="p-j1-2">Faire les <a href="cours1.html#exos">exercices des diapos</a> du cours 1</label></li>
+            <li><input type="checkbox" id="p-j1-3"><label for="p-j1-3">Faire le <a href="cours1.html#serie-n1">niveau 1</a> du cours 1</label></li>
+          </ul>
+        </div>
+      </li>
+      <li class="day" id="j2">
+        <div class="day__head"><span class="day__n">J2</span><span class="day__t">2 h 30</span><span class="day__count">0 / 2</span></div>
+        <div class="day__body">
+          <h3>Cours 2 · parties 1 et 2</h3>
+          <ul class="tasks">
+            <li><input type="checkbox" id="p-j2-1"><label for="p-j2-1">Lire le cours 2, <a href="cours2.html#partie1">partie 1</a> (cellules, myéline, nerf) et <a href="cours2.html#partie2">partie 2</a> (encéphale, moelle, méninges)</label></li>
+            <li><input type="checkbox" id="p-j2-2"><label for="p-j2-2">Sans relire avant : <a href="cours1.html#serie-n2">niveau 2</a> du cours 1</label></li>
+          </ul>
+        </div>
+      </li>
+      <li class="day" id="j3">
+        <div class="day__head"><span class="day__n">J3</span><span class="day__t">2 h 30</span><span class="day__count">0 / 4</span></div>
+        <div class="day__body">
+          <h3>Cours 2 · partie 3</h3>
+          <ul class="tasks">
+            <li><input type="checkbox" id="p-j3-1"><label for="p-j3-1">Lire le cours 2, <a href="cours2.html#partie3">partie 3</a> (nerfs, réflexe, sympathique / parasympathique)</label></li>
+            <li><input type="checkbox" id="p-j3-2"><label for="p-j3-2">Faire les <a href="cours2.html#exos">exercices des diapos</a> du cours 2</label></li>
+            <li><input type="checkbox" id="p-j3-3"><label for="p-j3-3">Faire le <a href="cours2.html#serie-n1">niveau 1</a> du cours 2</label></li>
+            <li><input type="checkbox" id="p-j3-4"><label for="p-j3-4">Faire le <a href="cours1.html#serie-n3">niveau 3</a> du cours 1</label></li>
+          </ul>
+        </div>
+      </li>
+      <li class="day" id="j4">
+        <div class="day__head"><span class="day__n">J4</span><span class="day__t">2 h 30</span><span class="day__count">0 / 4</span></div>
+        <div class="day__body">
+          <h3>Cours 3 · Locomotion</h3>
+          <ul class="tasks">
+            <li><input type="checkbox" id="p-j4-1"><label for="p-j4-1">Lire le <a href="cours3.html">cours 3</a> en entier, schémas compris</label></li>
+            <li><input type="checkbox" id="p-j4-2"><label for="p-j4-2">Faire les <a href="cours3.html#exos">exercices des diapos</a> du cours 3</label></li>
+            <li><input type="checkbox" id="p-j4-3"><label for="p-j4-3">Faire le <a href="cours3.html#serie-n1">niveau 1</a> du cours 3</label></li>
+            <li><input type="checkbox" id="p-j4-4"><label for="p-j4-4">Sans relire avant : <a href="cours2.html#serie-n2">niveau 2</a> du cours 2</label></li>
+          </ul>
+        </div>
+      </li>
+      <li class="day" id="j5">
+        <div class="day__head"><span class="day__n">J5</span><span class="day__t">2 h</span><span class="day__count">0 / 3</span></div>
+        <div class="day__body">
+          <h3>Approfondir</h3>
+          <ul class="tasks">
+            <li><input type="checkbox" id="p-j5-1"><label for="p-j5-1">Faire les niveaux <a href="cours3.html#serie-n2">2</a> et <a href="cours3.html#serie-n3">3</a> du cours 3</label></li>
+            <li><input type="checkbox" id="p-j5-2"><label for="p-j5-2">Faire le <a href="cours2.html#serie-n3">niveau 3</a> du cours 2</label></li>
+            <li><input type="checkbox" id="p-j5-3"><label for="p-j5-3">Réviser les lexiques des cours <a href="cours1.html#lexique">1</a> et <a href="cours2.html#lexique">2</a> en mode flashcards</label></li>
+          </ul>
+        </div>
+      </li>
+      <li class="day" id="j6">
+        <div class="day__head"><span class="day__n">J6</span><span class="day__t">2 h</span><span class="day__count">0 / 3</span></div>
+        <div class="day__body">
+          <h3>Relier les cours</h3>
+          <ul class="tasks">
+            <li><input type="checkbox" id="p-j6-1"><label for="p-j6-1">Lire la <a href="synthese.html">synthèse</a> : <a href="synthese.html#frisson">frisson</a>, <a href="synthese.html#carte-liens">liens</a>, <a href="synthese.html#pieges">pièges</a>, <a href="synthese.html#mnemos">mnémos</a></label></li>
+            <li><input type="checkbox" id="p-j6-2"><label for="p-j6-2">Passer le <a href="synthese.html#examen-blanc">premier examen blanc</a>, sans regarder les fiches</label></li>
+            <li><input type="checkbox" id="p-j6-3"><label for="p-j6-3">Faire les questions Moodle du cours (sur Moodle)</label></li>
+          </ul>
+        </div>
+      </li>
+      <li class="day" id="j7">
+        <div class="day__head"><span class="day__n">J7</span><span class="day__t">2 h</span><span class="day__count">0 / 4</span></div>
+        <div class="day__body">
+          <h3>Dernière ligne droite</h3>
+          <ul class="tasks">
+            <li><input type="checkbox" id="p-j7-1"><label for="p-j7-1">Dans chaque série, cliquer sur « Revoir seulement mes erreurs » et les refaire</label></li>
+            <li><input type="checkbox" id="p-j7-2"><label for="p-j7-2">Lexique du <a href="cours3.html#lexique">cours 3</a> en flashcards, puis les 3 cours en « Vue essentielle »</label></li>
+            <li><input type="checkbox" id="p-j7-3"><label for="p-j7-3">Passer le <a href="synthese.html#examen-blanc">deuxième examen blanc</a> : objectif 18/24</label></li>
+            <li><input type="checkbox" id="p-j7-4"><label for="p-j7-4">Lire <a href="synthese.html#essentiel">L'essentiel des 3 cours</a>, puis se coucher tôt</label></li>
+          </ul>
+        </div>
+      </li>
+    </ol>
+    <div class="duo prog-rules">
+      <div class="note retenir">
+        <p class="tag">Les 4 règles</p>
+        <ul>
+          <li><b>Chaque jour, refais un peu des cours d'avant</b> : c'est ce qui remplace des semaines de révisions espacées.</li>
+          <li><b>Réponds toujours avant d'ouvrir la correction.</b> Une erreur comprise s'apprend mieux qu'une page relue.</li>
+          <li><b>« Revoir seulement mes erreurs »</b> fait le tri : à J7, tu ne revois que ce qui t'a résisté.</li>
+          <li><b>Dors.</b> La mémoire se consolide la nuit ; une nuit blanche la veille fait perdre plus qu'elle ne rapporte.</li>
+        </ul>
+      </div>
+      <div class="note ex">
+        <p class="tag">Le signal que tu es prêt(e)</p>
+        <p><b>18/24 ou plus</b> à l'<a href="synthese.html#examen-blanc">examen blanc</a>, sans regarder les fiches. En dessous, refais tes erreurs et repasse-le le lendemain.</p>
+        <p>Il ne couvre que les diapos : complète avec les questions Moodle et ce que le prof a dit en cours.</p>
+      </div>
     </div>
   </section>
 
@@ -424,6 +560,7 @@
     <span>D'après les diapos du cours (diffusion interdite) · compléments signalés « hors diapo »</span>
   </footer>
 </main>
+
 <script src="quiz.js"></script>
 </body>
 </html>
